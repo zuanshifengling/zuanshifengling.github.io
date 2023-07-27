@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>加入友链.md</title>
+    <link href="/2023/07/27/%E5%8A%A0%E5%85%A5%E5%8F%8B%E9%93%BE/"/>
+    <url>/2023/07/27/%E5%8A%A0%E5%85%A5%E5%8F%8B%E9%93%BE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="想要加入友链？"><a href="#想要加入友链？" class="headerlink" title="想要加入友链？"></a>想要加入友链？</h1><p>如果你想要将你的网站加入到本站友链，请打开此链接：<code>https://github.com/zuanshifengling/blog-pinglun/issues</code>，并新建一个议题</p><p>格式如下：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs awk">标题：网站的名字，如：hexo<br>内容：<br>    链接：网站链接，如：https:<span class="hljs-regexp">//</span>hexo.io<br>    提示信息：如：一个博客框架<br>    图片：地址（格式必须是png），如：https:<span class="hljs-regexp">//</span>xxx.com/<span class="hljs-number">1</span>.png<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站建设</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网站</tag>
+      
+      <tag>友链</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+  
+  
+  <entry>
+    <title>关于</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p>欢迎光临本站！</p><hr><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>诶嘿，什么也没有！</p><hr><p>一个人玩游戏好无聊啊（又菜又爱玩）</p><ul><li>原神B服：<code>519684643</code></li><li>原神官服：<code>236478484</code></li><li>崩坏：星穹铁道：<code>109871223</code></li></ul><hr><h2 id="关于网站"><a href="#关于网站" class="headerlink" title="关于网站"></a>关于网站</h2><p>页面托管自<a href="github.io">GitHub Pages</a>，采用GitHub + <a href="https://vercel.com/">Vercel</a>双线部署</p><p>博客使用<a href="https://hexo.io/">Hexo</a>，主题使用<a href="https://hexo.fluid-dev.com/">fluid</a></p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[[{"name":"DASHENG-900x700-1.png","date":1518959551960},{"name":"DASHENG-900x700-2.png","date":1518959599098},{"name":"DASHENG-900x700-3.png","date":1518959609913},{"name":"DASHENG-900x700-4.png","date":1518959618105}]]]></content>
+    
+  </entry>
+  
+  
+  
+</search>
