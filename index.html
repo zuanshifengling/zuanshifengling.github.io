@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -11,6 +11,8 @@
   <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="UUUP">
@@ -62,7 +64,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":true,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -267,15 +269,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/07/27/%E5%8A%A0%E5%85%A5%E5%8F%8B%E9%93%BE/" target="_self">
-          加入友链.md
+        <a href="/2023/07/27/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/" target="_self">
+          个人家庭服务器搭建指南-1
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/%E5%8A%A0%E5%85%A5%E5%8F%8B%E9%93%BE/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/" target="_self">
         <div>
-          想要加入友链？如果你想要将你的网站加入到本站友链，请打开此链接：https://github.com/zuanshifengling/blog-pinglun/issues，并新建一个议题 格式如下： 12345标题：网站的名字，如：hexo内容：    链接：网站链接，如：https://hexo.io    提示信息：如：一个博客框架    图片：地址（格式必须是png），如：https://
+          个人家庭服务器搭建指南-1 介绍目标是在家庭的局域网内搭建属于自己的网站。  前言如果有不足之处请在评论区指出。 如果你觉得文章写得还不错的话，就点一个不要钱的赞吧。  本章节需要的物品1.一台废弃的电脑 2.一台可以正常使用的电脑 3.一个不小于4G的U盘  配置最低的配置： 12345废弃的电脑（最好是台式机）一台：	内存（RAM）不低于4G	存储空间不低于100G	不需要外接设备	可以连接网
         </div>
       </a>
 
@@ -283,7 +285,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-27 11:21" pubdate>
+            <time datetime="2023-07-27 14:50" pubdate>
               2023-07-27
             </time>
           </div>
@@ -299,7 +301,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/" class="category-chain-item">网站建设</a>
+  <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="category-chain-item">服务器搭建</a>
   
   
 
@@ -314,9 +316,322 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E7%BD%91%E7%AB%99/">#网站</a>
+              <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">#服务器</a>
             
-              <a href="/tags/%E5%8F%8B%E9%93%BE/">#友链</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/27/Java/Java-%E8%BF%99%E4%B8%AA%E6%B3%A8%E9%87%8A%E6%80%8E%E4%B9%88%E8%BF%99%E4%B9%88%E5%A5%87%E6%80%AA/" target="_self">
+          Java-这个注释怎么这么奇怪
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/Java/Java-%E8%BF%99%E4%B8%AA%E6%B3%A8%E9%87%8A%E6%80%8E%E4%B9%88%E8%BF%99%E4%B9%88%E5%A5%87%E6%80%AA/" target="_self">
+        <div>
+          Java-这个注释怎么这么奇怪?首先来看看下面的代码，简单到main方法中只有一行注释。 123public static void main(String[] args) &#123;    // \u000d System.out.println(&quot;Hello world!&quot;);&#125;  猜猜看，这段程序运行结果如何？执行后它居然会在控制台打印： 1Hello wor
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-27 14:48" pubdate>
+              2023-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">#Java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/27/Markdown/Markdown%E8%AF%AD%E6%B3%95%E9%9B%86%E5%90%88/" target="_self">
+          Markdown语法集合
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/Markdown/Markdown%E8%AF%AD%E6%B3%95%E9%9B%86%E5%90%88/" target="_self">
+        <div>
+          Markdown语法集合 这是一篇关于Markdown语法的文章，如果有没有提到的语法，请在评论中指出。 参考：    菜鸟教程-Mardown   Markdown语法大全(超级版)_Lapland Stark的博客-CSDN博客   编辑器推荐 VS Code Typora（我用的就是）  标题使用-和=：1234这是一级标题===========这是二级标题-----------  效果：
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-27 14:47" pubdate>
+              2023-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Markdown/" class="category-chain-item">Markdown</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MarkDown/">#MarkDown</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/27/Python%20Flask/Python-Flask%E6%80%8E%E6%A0%B7%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" target="_self">
+          Python Flask怎样定位访问者的IP
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/Python%20Flask/Python-Flask%E6%80%8E%E6%A0%B7%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" target="_self">
+        <div>
+          Python Flask怎样定位访问者的IP介绍在使用Python Flask写Web程序时，有时候会有这样的需求：  怎样定位访问者的IP  一个Flask程序123456789101112# -*- coding:utf-8 -*-from flask import Flaskapp = Flask(__name__)@app.route(&#x27;/&#x27;)def index():
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-27 14:45" pubdate>
+              2023-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Python-Flask/" class="category-chain-item">Python Flask</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+              <a href="/tags/Flask/">#Flask</a>
+            
+              <a href="/tags/IP/">#IP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/27/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/" target="_self">
+          发现GitHub-文件快递柜-转载
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/" target="_self">
+        <div>
+          FileCoxBox-Lite匿名口令分享文本，文件，像拿快递一样取文件  简体中文 | English 主要特色 轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI 轻松上传：复制粘贴，拖拽选择 多种类型：文本，文件 防止爆破：错误次数限制 防止滥用：IP限制上传次数 口令分享：随机口令，存取文件，自定义次数以及有效期 匿名分享：无需注册，无需登录 管理面板：查看所有文件，删
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-27 14:38" pubdate>
+              2023-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%8F%91%E7%8E%B0GitHub/" class="category-chain-item">发现GitHub</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/GitHub/">#GitHub</a>
+            
+              <a href="/tags/%E8%BD%AC%E8%BD%BD/">#转载</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/27/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/" target="_self">
+          Python PEP8-中文版-全文1
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/27/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/" target="_self">
+        <div>
+          Python PEP8-中文版-全文(1)PEP 8——Python代码风格指南PEP: 8标题:Python代码风格指南版本:c451868df657Last-Modified: 2016-06-08 10:43:53 -0400(2016年6月8日星期三)作者:guido van Rossum ， Barry Warsaw &lt; Barry at python.org&gt;， Nick
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-27 14:38" pubdate>
+              2023-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Python-PEP%E6%A0%87%E5%87%86/" class="category-chain-item">Python PEP标准</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+              <a href="/tags/%E7%BF%BB%E8%AF%91/">#翻译</a>
+            
+              <a href="/tags/PEP%E6%A0%87%E5%87%86/">#PEP标准</a>
             
           </div>
         
@@ -372,7 +687,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo框架</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid主题</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo框架</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid主题</span></a> <!-- 徽标设置 --> <br> <a href="https://github.com/" target="_blank"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" srcset="/img/loading.gif" lazyload alt="本站项目由Github托管"></a> <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" srcset="/img/loading.gif" lazyload alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a> 
     </div>
   
   
@@ -412,7 +727,7 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.configure({"showSpinner":true,"trickleSpeed":100})
     NProgress.start()
     window.addEventListener('load', function() {
       NProgress.done();
