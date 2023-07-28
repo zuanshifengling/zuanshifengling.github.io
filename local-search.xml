@@ -167,22 +167,22 @@
   
   
   <entry>
-    <title></title>
+    <title>关于</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[[{"name":"DASHENG-900x700-1.png","date":1518959551960},{"name":"DASHENG-900x700-2.png","date":1518959599098},{"name":"DASHENG-900x700-3.png","date":1518959609913},{"name":"DASHENG-900x700-4.png","date":1518959618105}]]]></content>
+    <content type="html"><![CDATA[<p>欢迎光临本站！</p><hr><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>诶嘿，什么也没有！</p><hr><p>一个人玩游戏好无聊啊（又菜又爱玩）</p><ul><li>原神B服：<code>519684643</code></li><li>原神官服：<code>236478484</code></li><li>崩坏：星穹铁道：<code>109871223</code></li><li>原神国际服：<code>888540571</code></li></ul><hr><h2 id="关于网站"><a href="#关于网站" class="headerlink" title="关于网站"></a>关于网站</h2><p>页面托管自<a href="github.io">GitHub Pages</a>，采用GitHub + <a href="https://vercel.com/">Vercel</a>双线部署</p><p>博客使用<a href="https://hexo.io/">Hexo</a>，主题使用<a href="https://hexo.fluid-dev.com/">fluid</a>修改版本</p><p>网站使用<a href="https://cloudflare.com/">Cloudflare</a>加速</p>]]></content>
     
   </entry>
   
   
   
   <entry>
-    <title>关于</title>
+    <title></title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p>欢迎光临本站！</p><hr><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>诶嘿，什么也没有！</p><hr><p>一个人玩游戏好无聊啊（又菜又爱玩）</p><ul><li>原神B服：<code>519684643</code></li><li>原神官服：<code>236478484</code></li><li>崩坏：星穹铁道：<code>109871223</code></li></ul><hr><h2 id="关于网站"><a href="#关于网站" class="headerlink" title="关于网站"></a>关于网站</h2><p>页面托管自<a href="github.io">GitHub Pages</a>，采用GitHub + <a href="https://vercel.com/">Vercel</a>双线部署</p><p>博客使用<a href="https://hexo.io/">Hexo</a>，主题使用<a href="https://hexo.fluid-dev.com/">fluid</a></p><p>网站使用<a href="https://cloudflare.com/">Cloudflare</a>加速</p>]]></content>
+    <content type="html"><![CDATA[[{"name":"DASHENG-900x700-1.png","date":1518959551960},{"name":"DASHENG-900x700-2.png","date":1518959599098},{"name":"DASHENG-900x700-3.png","date":1518959609913},{"name":"DASHENG-900x700-4.png","date":1518959618105}]]]></content>
     
   </entry>
   
