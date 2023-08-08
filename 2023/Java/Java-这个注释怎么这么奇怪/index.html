@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=light>
+<html lang="zh-CN" >
 
 
 
@@ -16,26 +16,27 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="UUUP">
-  <meta name="keywords" content="UUUP,博客,学习,实践,分享">
+  <meta name="keywords" content="">
   
     <meta name="description" content="Java- 这个注释怎么这么奇怪?首先来看看下面的代码，简单到 main 方法中只有一行注释。 123public static void main(String[] args) &amp;#123;    &#x2F;&#x2F; \u000d System.out.println(&quot;Hello world!&quot;);&amp;#125;  猜猜看，这段程序运行结果如何？执行后它居然会在控制台打印： 1Hello">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java- 这个注释怎么这么奇怪">
-<meta property="og:url" content="https://zuanshifengling.github.io/2023/07/Java/Java-%E8%BF%99%E4%B8%AA%E6%B3%A8%E9%87%8A%E6%80%8E%E4%B9%88%E8%BF%99%E4%B9%88%E5%A5%87%E6%80%AA/index.html">
-<meta property="og:site_name" content="👏欢迎访问 UP_UP!">
+<meta property="og:url" content="https://zuanshifengling.github.io/2023/Java/Java-%E8%BF%99%E4%B8%AA%E6%B3%A8%E9%87%8A%E6%80%8E%E4%B9%88%E8%BF%99%E4%B9%88%E5%A5%87%E6%80%AA/index.html">
+<meta property="og:site_name" content="👏欢迎访问 UUUP の 小破站">
 <meta property="og:description" content="Java- 这个注释怎么这么奇怪?首先来看看下面的代码，简单到 main 方法中只有一行注释。 123public static void main(String[] args) &amp;#123;    &#x2F;&#x2F; \u000d System.out.println(&quot;Hello world!&quot;);&amp;#125;  猜猜看，这段程序运行结果如何？执行后它居然会在控制台打印： 1Hello">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-27T06:48:54.000Z">
-<meta property="article:modified_time" content="2023-07-27T06:49:35.425Z">
+<meta property="article:modified_time" content="2023-08-08T02:34:11.909Z">
 <meta property="article:author" content="UUUP">
 <meta property="article:tag" content="Java">
+<meta property="article:tag" content="注释">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Java- 这个注释怎么这么奇怪 | 👏欢迎访问 UP_UP!</title>
+  <title>Java- 这个注释怎么这么奇怪 | 👏欢迎访问 UUUP の 小破站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -64,8 +65,6 @@
 
   <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
 
 
 
@@ -77,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":200,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":5,"color":"#29d","options":{"showSpinner":true,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/site/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":180,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":6,"color":"#29d","options":{"showSpinner":true,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/site/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -151,7 +150,7 @@
             <li class="nav-item">
               <a class="nav-link" target="_blank" rel="noopener" href="https://uuupdd.github.io/">
                 
-                <span>📢 引导/发布页面</span>
+                <span>引导/发布页面</span>
               </a>
             </li>
           
@@ -236,12 +235,6 @@
           </li>
           
         
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
         
       </ul>
     </div>
@@ -346,7 +339,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年7月27日 下午
+                    本文最后更新于：2023年8月8日 上午
                   
                 
               </p>
@@ -409,6 +402,8 @@
       
         <a href="/tags/Java/" class="print-no-link">#Java</a>
       
+        <a href="/tags/%E6%B3%A8%E9%87%8A/" class="print-no-link">#注释</a>
+      
     </div>
   
 </div>
@@ -420,7 +415,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Java- 这个注释怎么这么奇怪</div>
-      <div>https://zuanshifengling.github.io/2023/07/Java/Java-这个注释怎么这么奇怪/</div>
+      <div>https://zuanshifengling.github.io/2023/Java/Java-这个注释怎么这么奇怪/</div>
     </div>
     <div class="license-meta">
       
@@ -438,7 +433,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月27日</div>
+          <div>2023年8月8日</div>
         </div>
       
       
@@ -483,7 +478,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/" title="个人家庭服务器搭建指南 -1">
+                      <a href="/2023/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/" title="个人家庭服务器搭建指南 -1">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">个人家庭服务器搭建指南 -1</span>
                         <span class="visible-mobile">上一篇</span>
@@ -493,7 +488,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/Markdown/Markdown%E8%AF%AD%E6%B3%95%E9%9B%86%E5%90%88/" title="Markdown 语法集合">
+                      <a href="/2023/Markdown/Markdown%E8%AF%AD%E6%B3%95%E9%9B%86%E5%90%88/" title="Markdown 语法集合">
                         <span class="hidden-mobile">Markdown 语法集合</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -509,23 +504,19 @@
   
     <article id="comments" lazyload>
       
-  <div id="valine"></div>
+  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"appId":"bgpXrXmyH1xBNwjS3UCJiI6C-MdYXbMMI","appKey":"auO7npanoyMWRgXuRY1wP9ZQ","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
+          {"clientID":"51ff2e3f4bfa8c6b1a15","clientSecret":"9f8f23bcd6e4d22a884866b465d0269fa7615264","repo":"https://github.com/zuanshifengling/blog-pinglun","owner":"zuanshifengling","admin":["zuanshifengling","UUUPdd"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token"},
           {
-            el: "#valine",
-            path: window.location.pathname
+            id: '86f3bee3b0d974b509cacb2c11577e91'
           }
         )
-        new Valine(options);
-        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
-          var imgSelector = '#valine .vcontent img:not(.vemoji)';
-          Fluid.plugins.imageCaption(imgSelector);
-          Fluid.plugins.fancyBox(imgSelector);
-        })
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
       });
     });
   </script>
@@ -817,6 +808,7 @@
   
 <script src="/custom/js/custom.js"></script>
 <script src="/custom/js/sakura.js"></script>
+<script src="/custom/js/live2d.js"></script>
 
 
 
