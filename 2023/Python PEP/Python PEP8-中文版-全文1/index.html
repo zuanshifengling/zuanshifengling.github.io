@@ -7,31 +7,33 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="Python PEP8- 中文版 - 全文(1)PEP 8——Python 代码风格指南PEP: 8 标题:Python 代码风格指南  版本:c451868df657Last-Modified: 2016-06-08 10:43:53 -0400(2016 年 6 月 8 日星期三)作者:guido van Rossum ， Barry Warsaw &lt; Barry at python.o">
+<meta name="description" content="Python PEP8-中文版-全文(1)PEP 8——Python代码风格指南PEP: 8标题:Python代码风格指南版本:c451868df657Last-Modified: 2016-06-08 10:43:53 -0400(2016年6月8日星期三)作者:guido van Rossum ， Barry Warsaw &lt; Barry at python.org&gt;， Nick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python PEP8- 中文版 - 全文 1">
+<meta property="og:title" content="Python PEP8-中文版-全文1">
 <meta property="og:url" content="https://zuanshifengling.github.io/2023/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/index.html">
-<meta property="og:site_name" content="👏欢迎访问 UUUP の 小破站">
-<meta property="og:description" content="Python PEP8- 中文版 - 全文(1)PEP 8——Python 代码风格指南PEP: 8 标题:Python 代码风格指南  版本:c451868df657Last-Modified: 2016-06-08 10:43:53 -0400(2016 年 6 月 8 日星期三)作者:guido van Rossum ， Barry Warsaw &lt; Barry at python.o">
+<meta property="og:site_name" content="👏欢迎访问 UUUP の 小站">
+<meta property="og:description" content="Python PEP8-中文版-全文(1)PEP 8——Python代码风格指南PEP: 8标题:Python代码风格指南版本:c451868df657Last-Modified: 2016-06-08 10:43:53 -0400(2016年6月8日星期三)作者:guido van Rossum ， Barry Warsaw &lt; Barry at python.org&gt;， Nick">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-27T06:38:14.000Z">
 <meta property="article:modified_time" content="2023-07-27T06:44:05.374Z">
-<meta property="article:author" content="UUUP-Z">
+<meta property="article:author" content="UUUP-Zhao">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="翻译">
 <meta property="article:tag" content="PEP标准">
 <meta name="twitter:card" content="summary">
 
 
-<title >Python PEP8- 中文版 - 全文 1</title>
+<title >Python PEP8-中文版-全文1</title>
 
 <!-- Favicon -->
 
-    <link href='/img/favicon.svg?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
+    <link href='/mg/favicon.png?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
 
 
-    <link href='/img/favicon.svg?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
+    <link href='/img/favicon.png?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
 
+
+    <link href='/img/favicon.png?v=2.1.10' rel='apple-touch-icon' sizes='180x180' ></link>
 
 
 
@@ -61,7 +63,7 @@
 
 
 <!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"zuanshifengling.github.io","author":"UUUP-Z","root":"/","typed_text":["Welcome back","I'm OP!"],"theme_version":"2.1.10","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"https://i0.hdslb.com/bfs/article/0e5296ad96bf9fae19b2ac42a423a2c8758fc5e5.jpg@1256w_1240h_!web-article-pic.webp","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","showText":"(/≧▽≦/)噫！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"10/22/2022 18:00:00","prefix":"本站已在夹缝中生存 undefined 天"},"notice_outdate":{"enable":true,"style":"flat","limit_day":500,"position":"top"}};</script>
+<script>window.ASYNC_CONFIG = {"hostname":"zuanshifengling.github.io","author":"UUUP-Zhao","root":"/","typed_text":["Welcome back","I'm OP!","原神，启动！"],"theme_version":"2.1.10","theme":{"switch":true,"default":"auto"},"favicon":{"logo":"/img/logo.webp","icon16":"/mg/favicon.png","icon32":"/img/favicon.png","appleTouchIcon":"/img/favicon.png","webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","showText":"(/≧▽≦/)噫！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":false},"live_time":{"start_time":"10/22/2022 18:00:00","prefix":"本站已在夹缝中生存 undefined 天"},"notice_outdate":{"enable":true,"style":"flat","limit_day":500,"position":"top"},"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"path":"search.xml"}};</script>
 <script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-07-27 14:44:05"};</script>
 
 <!-- Theme mode css -->
@@ -129,7 +131,7 @@
 			<!-- logo -->
 <a href="/" class="trm-logo-frame trm-anima-link">
     
-        <img alt="logo" src="https://i0.hdslb.com/bfs/article/0e5296ad96bf9fae19b2ac42a423a2c8758fc5e5.jpg@1256w_1240h_!web-article-pic.webp">
+        <img alt="logo" src="/img/logo.webp">
     
     
         <div class="trm-logo-text">
@@ -147,28 +149,49 @@
             
             <li class="menu-item-has-children ">
                 <a  href="/" target="">
-                    首页
+                    Home
                 </a>
                 
             </li>
             
             <li class="menu-item-has-children ">
                 <a  href="/archives/" target="">
-                    归档
+                    Archives
                 </a>
                 
             </li>
             
             <li class="menu-item-has-children ">
-                <a  href="/about/" target="">
-                    关于
+                <a  href="/categories/" target="">
+                    Categories
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/tags/" target="">
+                    Tags
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    Links
                 </a>
                 
             </li>
             
             <li class="menu-item-has-children ">
                 <a  href="/photos/" target="">
-                    menu.photos
+                    Photos
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    Aboout
                 </a>
                 
             </li>
@@ -190,6 +213,12 @@
     <!-- mode switcher place end -->
 
 			
+    
+    <div id="trm-search-btn" class="trm-search-btn">
+        <i class="iconfont fas fa-search"></i>
+    </div>
+     
+
 		</div>
 		<div class="trm-menu-btn">
 			<span></span>
@@ -205,7 +234,7 @@
     <div class="trm-banner">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/genshin%20impact%20wendi.jpg">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://zuanshifengling-github-io.pages.dev/photos/%E5%8E%9F%E7%A5%9E%E6%B8%A9%E8%BF%AA.jpg">
     <!-- banner cover end -->
     
 
@@ -224,7 +253,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Python PEP8- 中文版 - 全文 1
+                            Python PEP8-中文版-全文1
                         </h1>
 
                         
@@ -392,40 +421,40 @@
     <div class="col-sm-4">
         <div id="post-author" class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-user trm-icon"></i><br>
-            UUUP-Z
+            UUUP-Zhao
         </div>
     </div>
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="Python-PEP8- 中文版 - 全文 -1"><a href="#Python-PEP8- 中文版 - 全文 -1" class="headerlink" title="Python PEP8- 中文版 - 全文 (1)"></a>Python PEP8- 中文版 - 全文(1)</h1><p>PEP 8——Python 代码风格指南<br>PEP: 8<br> 标题:Python 代码风格指南 <br> 版本:c451868df657<br>Last-Modified: 2016-06-08 10:43:53 -0400(2016 年 6 月 8 日星期三)<br>作者:guido van Rossum <guido at python.org>， Barry Warsaw &lt; Barry at python.org&gt;， Nick Coghlan <ncoghlan at gmail.com><br>状态: 积极 <br> 类型: 过程 <br> 内容类型: 文本 &#x2F; x-rst<br>创建:05 - 7 - 2001<br>后历史:2001 年 7 月 5 日，2013 年 8 月 1 日</p>
-<h2 id="介绍"><a href="# 介绍" class="headerlink" title="介绍"></a>介绍 </h2><p> 本文给出了主要 Python 发行版中标准库的 Python 代码的编码约定。请参阅配套信息 PEP，其中描述了 Python[1]的 C 语言实现中 C 代码的风格指南。</p>
-<p>本文和 PEP 257(文档字符串约定)改编自 Guido 最初的 Python 风格指南文章，并添加了一些 Barry 的风格指南 [2] 的内容。</p>
+    <h1 id="Python-PEP8-中文版-全文-1"><a href="#Python-PEP8-中文版-全文-1" class="headerlink" title="Python PEP8-中文版-全文(1)"></a>Python PEP8-中文版-全文(1)</h1><p>PEP 8——Python代码风格指南<br>PEP: 8<br>标题:Python代码风格指南<br>版本:c451868df657<br>Last-Modified: 2016-06-08 10:43:53 -0400(2016年6月8日星期三)<br>作者:guido van Rossum <guido at python.org>， Barry Warsaw &lt; Barry at python.org&gt;， Nick Coghlan <ncoghlan at gmail.com><br>状态:积极<br>类型:过程<br>内容类型:文本&#x2F; x-rst<br>创建:05 - 7 - 2001<br>后历史:2001年7月5日，2013年8月1日</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文给出了主要Python发行版中标准库的Python代码的编码约定。请参阅配套信息PEP，其中描述了Python[1]的C语言实现中C代码的风格指南。</p>
+<p>本文和PEP 257(文档字符串约定)改编自Guido最初的Python风格指南文章，并添加了一些Barry的风格指南[2]的内容。</p>
 <p>随着语言本身的变化，过去的约定也会被淘汰，因此这个风格指南也会随着时间的推移而演变。</p>
 <p>许多项目都有自己的编码风格指南。在发生任何冲突的情况下，此类特定于项目的指南优先于该项目。</p>
-<h2 id="愚蠢的一致性是小心眼的妖怪"><a href="# 愚蠢的一致性是小心眼的妖怪" class="headerlink" title="愚蠢的一致性是小心眼的妖怪"></a>愚蠢的一致性是小心眼的妖怪</h2><p>Guido 的一个重要见解是，代码被阅读的频率远远超过它被编写的频率。这里提供的指南旨在提高代码的可读性，并使其在广泛的 Python 代码中保持一致。正如 PEP 20 所说，“可读性很重要”。</p>
+<h2 id="愚蠢的一致性是小心眼的妖怪"><a href="#愚蠢的一致性是小心眼的妖怪" class="headerlink" title="愚蠢的一致性是小心眼的妖怪"></a>愚蠢的一致性是小心眼的妖怪</h2><p>Guido的一个重要见解是，代码被阅读的频率远远超过它被编写的频率。这里提供的指南旨在提高代码的可读性，并使其在广泛的Python代码中保持一致。正如PEP 20所说，“可读性很重要”。</p>
 <p>风格指南是关于一致性的。与这个风格指南保持一致很重要。项目中的一致性更为重要。一个模块或功能的一致性是最重要的。</p>
 <p>然而，要知道什么时候不一致——有时风格指南的建议并不适用。当你怀疑的时候，用你最好的判断。看看其他的例子，并决定什么看起来最好。不要犹豫，尽管问!</p>
-<p>特别是: 不要仅仅为了遵循这个 PEP!</p>
+<p>特别是:不要仅仅为了遵循这个PEP!</p>
 <p>忽略某个特定准则的其他一些好理由:</p>
 <blockquote>
-<p>  1. 当应用该指导方针时，代码的可读性会降低，即使对于习惯阅读遵循该指导方针的代码的人也是如此。<br>  2. 与周围的代码保持一致，但也会破坏它(可能是由于历史原因)——尽管这也是一个清理别人的混乱的机会(以真正的 XP 风格)。<br>  3. 因为所讨论的代码早于指南的引入，并且没有其他原因来修改该代码。<br>  4. 当代码需要与不支持风格指南推荐功能的旧版本 Python 保持兼容时。</p>
+<p>  1.当应用该指导方针时，代码的可读性会降低，即使对于习惯阅读遵循该指导方针的代码的人也是如此。<br>  2.与周围的代码保持一致，但也会破坏它(可能是由于历史原因)——尽管这也是一个清理别人的混乱的机会(以真正的XP风格)。<br>  3.因为所讨论的代码早于指南的引入，并且没有其他原因来修改该代码。<br>  4.当代码需要与不支持风格指南推荐功能的旧版本Python保持兼容时。</p>
 </blockquote>
-<h2 id="代码布局"><a href="# 代码布局" class="headerlink" title="代码布局"></a>代码布局 </h2><h3 id="缩进"><a href="# 缩进" class="headerlink" title="缩进"></a> 缩进 </h3><p> 每层缩进使用 4 个空格。</p>
-<p>接续行应使用 Python 的隐式行连接在括号、括号和大括号内垂直对齐换行元素，或使用挂缩进[7]。当使用悬挂缩进时，应考虑以下事项; 第一行不应该有任何参数，并且应该使用进一步缩进来清楚地区分自己是接续行。</p>
+<h2 id="代码布局"><a href="#代码布局" class="headerlink" title="代码布局"></a>代码布局</h2><h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><p>每层缩进使用4个空格。</p>
+<p>接续行应使用Python的隐式行连接在括号、括号和大括号内垂直对齐换行元素，或使用挂缩进[7]。当使用悬挂缩进时，应考虑以下事项;第一行不应该有任何参数，并且应该使用进一步缩进来清楚地区分自己是接续行。</p>
 <p>应该的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以起始定界符对齐。</span></span><br><span class="line">Foo = long_function_name(var_one, var_two，</span><br><span class="line">var_three var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 包含更多缩进以区别于其他代码。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">long_function_name</span> (Var_one, var_two, var_three，</span><br><span class="line">					  var_four):</span><br><span class="line"><span class="built_in">print</span>(var_one)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 悬挂缩进应该添加一个层级。</span></span><br><span class="line">Foo = long_function_name(var_one var_two,</span><br><span class="line">					   var_three var_four)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以起始定界符对齐。</span></span><br><span class="line">Foo = long_function_name(var_one, var_two，</span><br><span class="line">var_three var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment">#包含更多缩进以区别于其他代码。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">long_function_name</span> (Var_one, var_two, var_three，</span><br><span class="line">					  var_four):</span><br><span class="line"><span class="built_in">print</span>(var_one)</span><br><span class="line"></span><br><span class="line"><span class="comment">#悬挂缩进应该添加一个层级。</span></span><br><span class="line">Foo = long_function_name(var_one var_two,</span><br><span class="line">					   var_three var_four)</span><br></pre></td></tr></table></figure>
 
 <p>错误的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不使用垂直对齐时，禁止将参数放在第一行。</span></span><br><span class="line">Foo = long_function_name(var_one, var_two，</span><br><span class="line">var_three var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要进一步缩进，因为缩进是不可区分的。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">long_function_name</span> (</span><br><span class="line">Var_one, var_two, var_three，</span><br><span class="line">var_four):</span><br><span class="line"><span class="built_in">print</span>(var_one)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#不使用垂直对齐时，禁止将参数放在第一行。</span></span><br><span class="line">Foo = long_function_name(var_one, var_two，</span><br><span class="line">var_three var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment">#需要进一步缩进，因为缩进是不可区分的。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">long_function_name</span> (</span><br><span class="line">Var_one, var_two, var_three，</span><br><span class="line">var_four):</span><br><span class="line"><span class="built_in">print</span>(var_one)</span><br></pre></td></tr></table></figure>
 
-<p>4 空格规则是可选的，用于接续行。</p>
+<p>4空格规则是可选的，用于接续行。</p>
 <p>可选:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 挂起的缩进 * * 可以 * * 缩进到 4 个空格以外的地方。</span></span><br><span class="line">Foo = long_function_name(var_one var_two,</span><br><span class="line">					   var_three var_four)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">当 if 语句的条件部分足够长，需要写多行时，值得注意的是两个字符的关键字 (即 if)，加上一个空格，再加上左括号，为多行条件语句的后续行创建了一个自然的 4 个空格的缩进。这可能会与嵌套在 if- 语句中的缩进代码产生视觉冲突，if- 语句自然也缩进为 4 个空格。PEP 没有明确说明如何(或是否) 从视觉上区分这些条件行与 if 语句中的嵌套套件。在这种情况下，可接受的选项包括但不限于:</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 没有额外的缩进。</span></span><br><span class="line">If (this_is_one_thing <span class="keyword">and</span></span><br><span class="line">that_is_another_thing):</span><br><span class="line">do_something ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加注释，这将为编辑器提供一些区别 </span></span><br><span class="line"><span class="comment"># 支持语法高亮。</span></span><br><span class="line">If (this_is_one_thing <span class="keyword">and</span></span><br><span class="line">that_is_another_thing):</span><br><span class="line"><span class="comment"># 由于两个条件都为真，我们可以 frobnicate。</span></span><br><span class="line">do_something ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在条件延续行上添加一些额外的缩进。</span></span><br><span class="line"> 如果 (this_is_one_thing</span><br><span class="line"> 和 that_is_another_thing):</span><br><span class="line">do_something ()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#挂起的缩进* *可以* *缩进到4个空格以外的地方。</span></span><br><span class="line">Foo = long_function_name(var_one var_two,</span><br><span class="line">					   var_three var_four)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">当if语句的条件部分足够长，需要写多行时，值得注意的是两个字符的关键字(即if)，加上一个空格，再加上左括号，为多行条件语句的后续行创建了一个自然的4个空格的缩进。这可能会与嵌套在if-语句中的缩进代码产生视觉冲突，if-语句自然也缩进为4个空格。PEP没有明确说明如何(或是否)从视觉上区分这些条件行与if语句中的嵌套套件。在这种情况下，可接受的选项包括但不限于:</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#没有额外的缩进。</span></span><br><span class="line">If (this_is_one_thing <span class="keyword">and</span></span><br><span class="line">that_is_another_thing):</span><br><span class="line">do_something ()</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加注释，这将为编辑器提供一些区别</span></span><br><span class="line"><span class="comment">#支持语法高亮。</span></span><br><span class="line">If (this_is_one_thing <span class="keyword">and</span></span><br><span class="line">that_is_another_thing):</span><br><span class="line"><span class="comment">#由于两个条件都为真，我们可以frobnicate。</span></span><br><span class="line">do_something ()</span><br><span class="line"></span><br><span class="line"><span class="comment">#在条件延续行上添加一些额外的缩进。</span></span><br><span class="line">如果(this_is_one_thing</span><br><span class="line">和that_is_another_thing):</span><br><span class="line">do_something ()</span><br></pre></td></tr></table></figure>
 
 
 <p>(另见下文关于在二元运算符之前还是之后中断的讨论。)</p>
-<p>在多行结构中，右花括号 &#x2F; 方括号 &#x2F; 圆括号可以对齐到列表最后一行的第一个非空白字符下面，如下所示:</p>
+<p>在多行结构中，右花括号&#x2F;方括号&#x2F;圆括号可以对齐到列表最后一行的第一个非空白字符下面，如下所示:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">My_list = [</span><br><span class="line">		 <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>，</span><br><span class="line">		 <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>，</span><br><span class="line">		 ]</span><br><span class="line">Result = some_function_that_takes_arguments(</span><br><span class="line">										<span class="string">&#x27;a&#x27;</span> <span class="string">&#x27;b&#x27;</span> <span class="string">&#x27;c&#x27;</span>，</span><br><span class="line">										<span class="string">&#x27;d&#x27;</span>， <span class="string">&#x27;e&#x27;</span>， <span class="string">&#x27;f&#x27;</span>，</span><br><span class="line">										)</span><br><span class="line"><span class="comment"># 它也可以排在多行结构开始的那一行的第一个字符下面，比如:</span></span><br><span class="line"></span><br><span class="line">My_list = [</span><br><span class="line">		 <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>，</span><br><span class="line">		 <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>，</span><br><span class="line">]</span><br><span class="line">Result = some_function_that_takes_arguments(</span><br><span class="line">										<span class="string">&#x27;a&#x27;</span> <span class="string">&#x27;b&#x27;</span> <span class="string">&#x27;c&#x27;</span>，</span><br><span class="line">										<span class="string">&#x27;d&#x27;</span>， <span class="string">&#x27;e&#x27;</span>， <span class="string">&#x27;f&#x27;</span>，</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 
@@ -437,11 +466,11 @@
 <ul class="trm-post-copyright">
     <li class="trm-post-copyright-author">
         <strong>本文作者：</strong>
-        UUUP-Z
+        UUUP-Zhao
     </li>
     <li class="trm-post-copyright-link">
         <strong>本文链接：</strong>
-        <a id="original-link" href="https://zuanshifengling.github.io/2023/Python PEP/Python PEP8-中文版-全文1/" title="Python PEP8- 中文版 - 全文 1">https://zuanshifengling.github.io/2023/Python PEP/Python PEP8-中文版-全文1/</a>
+        <a id="original-link" href="https://zuanshifengling.github.io/2023/Python PEP/Python PEP8-中文版-全文1/" title="Python PEP8-中文版-全文1">https://zuanshifengling.github.io/2023/Python PEP/Python PEP8-中文版-全文1/</a>
     </li>
     <li class="trm-post-copyright-license">
         <strong>版权声明：</strong>
@@ -477,7 +506,7 @@
             </div>
             <h5>
                 <a href="/2023/Python%20Flask/Python-Flask%E6%80%8E%E6%A0%B7%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" class="trm-anima-link">
-                    Python Flask 怎样定位访问者的 IP
+                    Python Flask怎样定位访问者的IP
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
@@ -485,7 +514,7 @@
                 <li>23/07/27</li>
                 <li>14:45</li>
                 
-                    <li>173</li>
+                    <li>169</li>
                 
                 
                     <li>1</li>
@@ -513,7 +542,7 @@
             </div>
             <h5>
                 <a href="/2023/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/" class="trm-anima-link">
-                    发现 GitHub- 文件快递柜 - 转载
+                    发现GitHub-文件快递柜-转载
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
@@ -521,7 +550,7 @@
                 <li>23/07/27</li>
                 <li>14:38</li>
                 
-                    <li>929</li>
+                    <li>924</li>
                 
                 
                     <li>3</li>
@@ -534,6 +563,50 @@
 </div>
 
     
+
+    <div id="giscus-wrap" class="trm-card trm-scroll-animation comment-container"></div>
+<script data-swup-reload-script>
+    function loadGiscus() {
+        let nowTheme = document.documentElement.classList.contains('dark') ? 'transparent_dark' : 'light'
+        const config = {
+            src: 'https://giscus.app/client.js',
+            "data-repo": 'zuanshifengling/pinglun',
+            "data-repo-id": 'R_kgDOLVN3sA',
+            "data-category": 'Announcements',
+            "data-category-id": 'DIC_kwDOLVN3sM4CdXnS',
+            "data-mapping": 'pathname',
+            "data-reactions-enabled": '1',
+            "data-emit-metadata": '0',
+            "data-theme": nowTheme,
+            "data-lang": 'zh-CN',
+            crossorigin: "anonymous",
+            async: true
+        }
+        let ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin', ele)
+    }
+
+    function changeGiscusTheme() {
+        let theme = document.documentElement.classList.contains('dark') ? 'transparent_dark' : 'light'
+
+        function sendMessage(message) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+
+        sendMessage({
+            setConfig: {
+                theme: theme
+            }
+        });
+    }
+
+    loadGiscus();
+</script>
 
 
 
@@ -570,6 +643,10 @@
         <div class="trm-footer-item blog-run-long"></div>
      
 
+    
+        <div class="trm-footer-item">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        </div>
      
 </footer>
                     <!-- footer end -->
@@ -591,7 +668,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Python PEP8- 中文版 - 全文(1)"><a rel="nofollow" class="trm-toc-link" href="#Python-PEP8- 中文版 - 全文 -1"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Python PEP8- 中文版 - 全文(1)</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="介绍 "><a rel="nofollow" class="trm-toc-link" href="#介绍"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">介绍 </span></a></li><li class="trm-toc-item trm-toc-level-2" title="愚蠢的一致性是小心眼的妖怪"><a rel="nofollow" class="trm-toc-link" href="#愚蠢的一致性是小心眼的妖怪"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">愚蠢的一致性是小心眼的妖怪</span></a></li><li class="trm-toc-item trm-toc-level-2" title="代码布局 "><a rel="nofollow" class="trm-toc-link" href="#代码布局"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">代码布局 </span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title=" 缩进 "><a rel="nofollow" class="trm-toc-link" href="#缩进"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text"> 缩进 </span></a></li></ol></li></ol></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Python PEP8-中文版-全文(1)"><a rel="nofollow" class="trm-toc-link" href="#Python-PEP8-中文版-全文-1"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Python PEP8-中文版-全文(1)</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="介绍"><a rel="nofollow" class="trm-toc-link" href="#介绍"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">介绍</span></a></li><li class="trm-toc-item trm-toc-level-2" title="愚蠢的一致性是小心眼的妖怪"><a rel="nofollow" class="trm-toc-link" href="#愚蠢的一致性是小心眼的妖怪"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">愚蠢的一致性是小心眼的妖怪</span></a></li><li class="trm-toc-item trm-toc-level-2" title="代码布局"><a rel="nofollow" class="trm-toc-link" href="#代码布局"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">代码布局</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="缩进"><a rel="nofollow" class="trm-toc-link" href="#缩进"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text">缩进</span></a></li></ol></li></ol></li></ol>
       </div>
     </div>
 
@@ -619,6 +696,43 @@
   <!-- app wrapper end -->
 
   
+    <div class="trm-search-popup">
+        <div class="trm-search-wrapper">
+            <div class="form trm-search-form">
+                <div class="trm-search-input-icon">
+                    <i class="iconfont fas fa-search"></i>
+                </div>
+                <input class="trm-search-input" type="text" placeholder="搜索文章...">
+                <div class="trm-search-btn-close">
+                    <i class="iconfont fas fa-times"></i>
+                </div>
+            </div>
+            <div class="trm-search-result-container">
+                <div class="trm-search-empty">
+                    请输入关键词进行搜索
+                </div>
+            </div>
+            <div class="trm-search-footer">
+                <div class="trm-search-stats"></div>
+                <ul class="trm-search-commands">
+                    <li>
+                        <kbd class="command-palette-commands-key">
+                            <svg width="15" height="15" aria-label="Escape key" role="img">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.2">
+                                    <path
+                                        d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956">
+                                    </path>
+                                </g>
+                            </svg>
+                        </kbd>
+                        <span class="command-palette-Label">to close</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
   <!-- Plugin -->
 
 
@@ -634,6 +748,11 @@
         <script src="/js/plugins/typing.js?v=2.1.10"></script>
     
 
+    
+        
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+
+        <script src="/js/plugins/local_search.js?v=2.1.10"></script>
     
 
     <!-- 数学公式 -->
@@ -654,11 +773,12 @@
     
 
     
-        
-<script src="/js/custom.js" async></script>
-<script src="/js/sakura.js" async></script>
 
     
+        
+<script src="/js/custom.js" defer></script>
+<script src="/js/sakura.js" defer></script>
+<script src="/js/live2d.js" defer></script>
 
     
 
