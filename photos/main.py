@@ -20,4 +20,4 @@ def add_prefix_to_images(directory, prefix):
             #     file.write(f"![]({new_filename})\n")
 
 # 使用示例：假设我们要处理的是'images'文件夹，并添加前缀'new_'
-add_prefix_to_images('./', 'https://zuanshifengling-github-io.pages.dev/photos/')
+add_prefix_to_images('./imgs/', 'https://zuanshifengling-github-io.pages.dev/photos/imgs/')
