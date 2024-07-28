@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/HuTao_smile_avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/HuTao_smile_avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/HuTao_smile_avatar.png">
+  <link rel="mask-icon" href="/images/HuTao_smile_avatar.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-loading-bar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zuanshifengling.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="FileCoxBox-Lite匿名口令分享文本，文件，像拿快递一样取文件  简体中文 | English 主要特色 轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI 轻松上传：复制粘贴，拖拽选择 多种类型：文本，文件 防止爆破：错误次数限制 防止滥用：IP限制上传次数 口令分享：随机口令，存取文件，自定义次数以及有效期 匿名分享：无需注册，无需登录 管理面板：查看所有文件，删">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="发现GitHub-文件快递柜-转载">
+<meta property="og:url" content="https://zuanshifengling.github.io/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/index.html">
+<meta property="og:site_name" content="👏欢迎访问UUUP の 小站">
+<meta property="og:description" content="FileCoxBox-Lite匿名口令分享文本，文件，像拿快递一样取文件  简体中文 | English 主要特色 轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI 轻松上传：复制粘贴，拖拽选择 多种类型：文本，文件 防止爆破：错误次数限制 防止滥用：IP限制上传次数 口令分享：随机口令，存取文件，自定义次数以及有效期 匿名分享：无需注册，无需登录 管理面板：查看所有文件，删">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667">
+<meta property="og:image" content="https://camo.githubusercontent.com/5410d13ff7e4a57adfa52302a38de9c243a5bd73c05f5edc879836728770c15d/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d7661737473612f46696c65436f6465426f7826747970653d44617465">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png">
+<meta property="article:published_time" content="2023-07-27T06:38:14.000Z">
+<meta property="article:modified_time" content="2023-07-27T06:41:46.815Z">
+<meta property="article:author" content="UUUP-Zh">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="转载">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png">
+
+
+<link rel="canonical" href="https://zuanshifengling.github.io/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zuanshifengling.github.io/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/","path":"2023/07/发现GitHub/发现GitHub-文件快递柜-转载/","title":"发现GitHub-文件快递柜-转载"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>发现GitHub-文件快递柜-转载 | 👏欢迎访问UUUP の 小站</title>
+  
+
+
+
+
+
+
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script src="/js/sakura.js"></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">👏欢迎访问UUUP の 小站</p>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/LuoTianYi_Qavatar_logo.png" alt="👏欢迎访问UUUP の 小站">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-navigation_page"><a href="https://uuupdd.github.io/" rel="section" target="_blank"><i class="fa fa-location-arrow fa-fw"></i>导航页</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#FileCoxBox-Lite"><span class="nav-text">FileCoxBox-Lite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E8%89%B2"><span class="nav-text">主要特色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F"><span class="nav-text">部署方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2"><span class="nav-text">Docker一键部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%96%B9%E5%BC%8F"><span class="nav-text">更新方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%96%B9%E5%BC%8F"><span class="nav-text">其他方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92"><span class="nav-text">项目规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E8%A7%88"><span class="nav-text">预览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E7%AB%99"><span class="nav-text">例站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F"><span class="nav-text">暗黑模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%84%E4%BB%B6"><span class="nav-text">寄件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%96%E4%BB%B6"><span class="nav-text">取件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E7%90%86"><span class="nav-text">管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81"><span class="nav-text">状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Star-History"><span class="nav-text">Star History</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%9E%E8%B5%8F"><span class="nav-text">赞赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E"><span class="nav-text">免责声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E8%BD%BD"><span class="nav-text">转载</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">UUUP-Zh</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zuanshifengling" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zuanshifengling" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/uuupdd" title="Github → https:&#x2F;&#x2F;github.com&#x2F;uuupdd" rel="noopener me" target="_blank">Github</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhyx_web@qq.com" title="E-Mail → mailto:zhyx_web@qq.com" rel="noopener me" target="_blank">E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://hexo.io/" title="https:&#x2F;&#x2F;hexo.io" rel="noopener" target="_blank">Hexo</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://theme-next.js.org/" title="https:&#x2F;&#x2F;theme-next.js.org" rel="noopener" target="_blank">Hexo-theme-NexT</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://convertio.co/zh" title="https:&#x2F;&#x2F;convertio.co&#x2F;zh" rel="noopener" target="_blank">文件转换器</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://docsmall.com/image-compress" title="https:&#x2F;&#x2F;docsmall.com&#x2F;image-compress" rel="noopener" target="_blank">图片压缩</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="UUUP-Zh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="发现GitHub-文件快递柜-转载 | 👏欢迎访问UUUP の 小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          发现GitHub-文件快递柜-转载<a href="https://github.com/zuanshifengling/zuanshifengling.github.io/_posts/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="发现GitHub-文件快递柜-转载" href="/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::1148baab90a6a36396da50099acfa75d" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>957</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="FileCoxBox-Lite"><a href="#FileCoxBox-Lite" class="headerlink" title="FileCoxBox-Lite"></a>FileCoxBox-Lite</h2><p><em>匿名口令分享文本，文件，像拿快递一样取文件</em></p>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://github.com/vastsa/FileCodeBox/blob/master/readme.md">简体中文</a> | <a target="_blank" rel="noopener" href="https://github.com/vastsa/FileCodeBox/blob/master/readme_en.md">English</a></p>
+<h2 id="主要特色"><a href="#主要特色" class="headerlink" title="主要特色"></a>主要特色</h2><ul>
+<li>轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI</li>
+<li>轻松上传：复制粘贴，拖拽选择</li>
+<li>多种类型：文本，文件</li>
+<li>防止爆破：错误次数限制</li>
+<li>防止滥用：IP限制上传次数</li>
+<li>口令分享：随机口令，存取文件，自定义次数以及有效期</li>
+<li>匿名分享：无需注册，无需登录</li>
+<li>管理面板：查看所有文件，删除文件</li>
+<li>一键部署：docker一键部署</li>
+</ul>
+<h2 id="部署方式"><a href="#部署方式" class="headerlink" title="部署方式"></a>部署方式</h2><h3 id="Docker一键部署"><a href="#Docker一键部署" class="headerlink" title="Docker一键部署"></a>Docker一键部署</h3><h4 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest</span><br></pre></td></tr></table></figure>
+
+<h4 id="ARM"><a href="#ARM" class="headerlink" title="ARM"></a>ARM</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:arm</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新方式"><a href="#更新方式" class="headerlink" title="更新方式"></a>更新方式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 停止容器并删除</span><br><span class="line">docker stop filecodebox &amp;&amp; docker rm filecodebox</span><br><span class="line">// 重新运行容器</span><br><span class="line">docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他方式"><a href="#其他方式" class="headerlink" title="其他方式"></a>其他方式</h3><p>仅供参考，历史版本-&gt;<a target="_blank" rel="noopener" href="https://www.yuque.com/lxyo/work/zd0kvzy7fofx6w7v">部署文档</a></p>
+<h2 id="项目规划"><a href="#项目规划" class="headerlink" title="项目规划"></a>项目规划</h2><p>2022年12月14日</p>
+<p>这个项目的灵感来源于丁丁快传，然后写了这么一个基于本机存储的快传系统，本系统主要是以轻量，单用户，离线环境（<code>私有化</code> ）为主，因此也不需要加太多东西，所以其实这个项目到这基本功能已经完成了，剩下的就是维护和完善现有功能。</p>
+<p>也不会再加入新的大功能了，如果有新的功能的话，那就是我们的Pro版本了，当然也是继续开源的，能和@veoco一起开源挺荣幸的，在他的代码中我学到了许多，此前我基本上是使用Django那一套，对Fastapi仅限于使用，他的许多写法让我受益匪浅，也让我对Fastapi有了更深的了解，所以我也会在Pro版本中使用Fastapi。</p>
+<p>根据目前一些使用反馈来说，希望加入登录功能，还有多存储引擎等，欢迎各位继续提意见，加入我们共同开发。</p>
+<p>如果你有更好的想法和建议欢迎提issue。</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><h3 id="例站"><a href="#例站" class="headerlink" title="例站"></a>例站</h3><p><a target="_blank" rel="noopener" href="https://share.lanol.cn/">https://share.lanol.cn</a></p>
+<h3 id="暗黑模式"><a href="#暗黑模式" class="headerlink" title="暗黑模式"></a>暗黑模式</h3><table>
+<thead>
+<tr>
+<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png" alt="寄文件"></a></th>
+<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png" alt="寄文件"></a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="寄件"><a href="#寄件" class="headerlink" title="寄件"></a>寄件</h3><table>
+<thead>
+<tr>
+<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png" alt="寄文件"></a></th>
+<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png" alt="寄文本"></a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png" alt="寄文本"></a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="取件"><a href="#取件" class="headerlink" title="取件"></a>取件</h3><table>
+<thead>
+<tr>
+<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png" alt="取件"></a></th>
+<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png" alt="取件码错误"></a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png" alt="取文件"></a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h3><p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png" alt="管理"></a></p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>如果需要修改配置，可以将该文件放在<code>/opt/FileCodeBox/</code>目录下，并命名为<code>.env</code>，然后重启容器即可。 如果不是Docker，则需要在项目同目录下新建一个<code>data</code>文件夹，然后在创建<code>.env</code>文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 端口</span><br><span class="line">PORT=12345</span><br><span class="line"># Sqlite数据库文件</span><br><span class="line">DATABASE_URL=sqlite+aiosqlite:///database.db</span><br><span class="line"># 静态文件夹</span><br><span class="line">DATA_ROOT=./static</span><br><span class="line"># 静态文件夹URL</span><br><span class="line">STATIC_URL=/static</span><br><span class="line"># 开启上传</span><br><span class="line">ENABLE_UPLOAD=True</span><br><span class="line"># 错误次数</span><br><span class="line">ERROR_COUNT=5</span><br><span class="line"># 错误限制分钟数</span><br><span class="line">ERROR_MINUTE=10</span><br><span class="line"># 上传次数</span><br><span class="line">UPLOAD_COUNT=60</span><br><span class="line"># 上传限制分钟数</span><br><span class="line">UPLOAD_MINUTE=1</span><br><span class="line"># 删除过期文件的间隔（分钟）</span><br><span class="line">DELETE_EXPIRE_FILES_INTERVAL=10</span><br><span class="line"># 管理地址</span><br><span class="line">ADMIN_ADDRESS=admin</span><br><span class="line"># 管理密码</span><br><span class="line">ADMIN_PASSWORD=admin</span><br><span class="line"># 文件大小限制，默认10MB</span><br><span class="line">FILE_SIZE_LIMIT=10</span><br><span class="line"># 网站标题</span><br><span class="line">TITLE=文件快递柜</span><br><span class="line"># 网站描述</span><br><span class="line">DESCRIPTION=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件</span><br><span class="line"># 网站关键词</span><br><span class="line">KEYWORDS=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件</span><br><span class="line"># 存储引擎</span><br><span class="line">STORAGE_ENGINE=filesystem</span><br></pre></td></tr></table></figure>
+
+<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667"><img data-src="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667" alt="Alt"></a></p>
+<h2 id="Star-History"><a href="#Star-History" class="headerlink" title="Star History"></a>Star History</h2><p><a target="_blank" rel="noopener" href="https://star-history.com/#vastsa/FileCodeBox&Date"><img data-src="https://camo.githubusercontent.com/5410d13ff7e4a57adfa52302a38de9c243a5bd73c05f5edc879836728770c15d/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d7661737473612f46696c65436f6465426f7826747970653d44617465" alt="Star History Chart"></a></p>
+<h2 id="赞赏"><a href="#赞赏" class="headerlink" title="赞赏"></a>赞赏</h2><table>
+<thead>
+<tr>
+<th>支付宝 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png" alt="支付宝"></a></th>
+<th>微信 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png" alt="微信"></a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol>
+<li>413 Request Entity Too Large Nginx限制： 找到自己主机的nginx.conf配置文件，打开 在http{}中加入 client_max_body_size 10m; 然后重启nginx</li>
+</ol>
+<h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本项目开源仅供学习使用，不得用于任何违法用途，否则后果自负，与本人无关。使用请保留项目地址谢谢。</p>
+<h2 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h2><p>本文转载至GitHub，原文链接：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/vastsa/FileCodeBox</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/vastsa/FileCodeBox">传送门</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+              <a href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag"># 转载</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/07/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/" rel="next" title="Python PEP8-中文版-全文1">
+                  Python PEP8-中文版-全文1 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS" sid="1148baab90a6a36396da50099acfa75d"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">UUUP-Zh</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">4k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">16 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/zuanshifengling/zuanshifengling.github.io" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyxq2M76H","appkey":"prod_150d9e80270f7782d95a0a03514059de","count":true}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
