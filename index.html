@@ -17,15 +17,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-loading-bar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-corner-indicator.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"zuanshifengling.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zuanshifengling.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="blog">
-<meta property="og:title" content="👏欢迎访问UUUP の 小站">
+<meta property="og:title" content="UUUP の 小站">
 <meta property="og:url" content="https://zuanshifengling.github.io/index.html">
-<meta property="og:site_name" content="👏欢迎访问UUUP の 小站">
+<meta property="og:site_name" content="UUUP の 小站">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="UUUP-Zh">
 <meta name="twitter:card" content="summary">
@@ -38,7 +38,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>👏欢迎访问UUUP の 小站</title>
+<title>UUUP の 小站</title>
   
 
 
@@ -47,7 +47,74 @@
 
 
 
-<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script type="text/javascript" charset="utf-8">
+    // live2d_path 参数建议使用绝对路径
+    const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+
+    // 封装异步加载资源的方法
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
+
+    // 加载 waifu.css live2d.min.js waifu-tips.js
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(live2d_path + "waifu.css", "css"),
+            loadExternalResource(live2d_path + "live2d.min.js", "js"),
+            loadExternalResource(live2d_path + "waifu-tips.js", "js")
+        ]).then(() => {
+            // 配置选项的具体用法见 README.md
+            initWidget({
+                waifuPath: live2d_path + "waifu-tips.json",
+                //apiPath: "https://live2d.fghrsh.net/api/",
+                cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+                // tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+                tools: ["hitokoto", "switch-model", "switch-texture", "quit"]
+            });
+        });
+    }
+
+    console.log(`
+    く__,.ヘヽ.        /  ,ー､ 〉
+            ＼ ', !-─‐-i  /  /´
+            ／｀ｰ'       L/／｀ヽ､
+            /   ／,   /|   ,   ,       ',
+        ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+            ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+            !,/7 '0'     ´0iソ|    |
+            |.从"    _     ,,,, / |./    |
+            ﾚ'| i＞.､,,__  _,.イ /   .i   |
+                ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+                | |/i 〈|/   i  ,.ﾍ |  i  |
+                .|/ /  ｉ：    ﾍ!    ＼  |
+                kヽ>､ﾊ    _,.ﾍ､    /､!
+                !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+                ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                    ﾄ-,/  |___./
+                    'ｰ'    !_,.:
+    酱酱，加载完毕！
+    呦，这都被你发现啦，快去评论区留个言吧
+    `);
+</script>
+
+
 <script src="/js/sakura.js"></script>
 
   <noscript>
@@ -73,14 +140,16 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">👏欢迎访问UUUP の 小站</h1>
+      <h1 class="site-title">UUUP の 小站</h1>
       <i class="logo-line"></i>
     </a>
-      <img class="custom-logo-image" src="/images/LuoTianYi_Qavatar_logo.png" alt="👏欢迎访问UUUP の 小站">
+      <p class="site-subtitle" itemprop="description">念念不忘，必有回响 <br> Ciallo～(∠・ω< )⌒☆</p>
+      <img class="custom-logo-image" src="/images/LuoTianYi_Qavatar_logo.png" alt="UUUP の 小站">
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -88,12 +157,38 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-navigation_page"><a href="https://uuupdd.github.io/" rel="section" target="_blank"><i class="fa fa-location-arrow fa-fw"></i>导航页</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-navigation_page"><a href="https://uuupdd.github.io/" rel="section" target="_blank"><i class="fa fa-location-arrow fa-fw"></i>导航页</a></li><li class="menu-item menu-item-cloudflare镜像加速地址"><a href="https://zuanshifengling-github-io.pages.dev/" rel="section" target="_blank"><i class="fa fa-location-arrow fa-fw"></i>CloudFlare镜像加速地址</a></li><li class="menu-item menu-item-vercel镜像加速地址"><a href="https://zhyx.vercel.app/" rel="section" target="_blank"><i class="fa fa-location-arrow fa-fw"></i>Vercel镜像加速地址</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </header>
         
@@ -125,13 +220,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+          <a href="/categories/">
         <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">分类</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">10</span>
@@ -149,9 +245,12 @@
       <span class="links-of-author-item">
         <a href="mailto:zhyx_web@qq.com" title="E-Mail → mailto:zhyx_web@qq.com" rel="noopener me" target="_blank">E-Mail</a>
       </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1670308509" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1670308509" rel="noopener me" target="_blank">BiliBili</a>
+      </span>
   </div>
   <div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
   </div>
 
         </div>
@@ -201,7 +300,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2024/07/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -209,21 +308,30 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="undefined | UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/" class="post-title-link" itemprop="url">发现GitHub-文件快递柜-转载</a>
         </h2>
 
         <div class="post-meta-container">
           <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8F%91%E7%8E%B0GitHub/" itemprop="url" rel="index"><span itemprop="name">发现GitHub</span></a>
+        </span>
+    </span>
 
   
   
@@ -234,8 +342,8 @@
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="Hello World" href="/2024/07/hello-world/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::62580a56592309bb19350ef81dca8b33" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="发现GitHub-文件快递柜-转载" href="/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::1148baab90a6a36396da50099acfa75d" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -246,210 +354,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>78</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2024/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="UUUP-Zh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" class="post-title-link" itemprop="url">Q-Python Flask如何定位访问者的IP</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="Q-Python Flask如何定位访问者的IP" href="/2024/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::d09c24277862db227a1ba04dc77db13d" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>162</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="如何在Python-Flask中获取访问者的IP地址"><a href="#如何在Python-Flask中获取访问者的IP地址" class="headerlink" title="如何在Python Flask中获取访问者的IP地址"></a>如何在Python Flask中获取访问者的IP地址</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在开发基于Python Flask的Web应用程序时，常常需要知道：</p>
-<blockquote>
-<p>如何确定访问者的IP地址</p>
-</blockquote>
-<h2 id="Flask基础程序示例"><a href="#Flask基础程序示例" class="headerlink" title="Flask基础程序示例"></a>Flask基础程序示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">index</span>():</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&lt;p&gt;Hello World!&lt;/p&gt;&#x27;</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">80</span>, debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="获取IP地址"><a href="#获取IP地址" class="headerlink" title="获取IP地址"></a>获取IP地址</h2><p>Flask框架便利地提供了获取访问者IP的捷径：</p>
-<blockquote>
-<p><strong>remote_addr</strong> 属性</p>
-</blockquote>
-<p>要使用这个功能，首先需要导入 <code>flask.request</code> 模块。<br>下面是一个实现示例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">index</span>():</span><br><span class="line">    visitor_ip = request.remote_addr</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&lt;h1&gt;您当前的IP地址是：&#x27;</span> + visitor_ip + <span class="string">&#x27;&lt;/h1&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="UUUP-Zh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/" class="post-title-link" itemprop="url">个人家庭服务器搭建指南-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="个人家庭服务器搭建指南-1" href="/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::1b02449d3c72c1855a8531e6c64e2212" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>774</span>
+      <span>958</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -467,103 +372,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="个人家庭服务器搭建指南-1"><a href="#个人家庭服务器搭建指南-1" class="headerlink" title="个人家庭服务器搭建指南-1"></a>个人家庭服务器搭建指南-1</h1><hr>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>目标是在家庭的局域网内搭建属于自己的网站。</p>
-<hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果有不足之处请在评论区指出。</p>
-<hr>
-<h2 id="本章节需要的物品"><a href="#本章节需要的物品" class="headerlink" title="本章节需要的物品"></a>本章节需要的物品</h2><p>1.一台废弃的电脑</p>
-<p>2.一台可以正常使用的电脑</p>
-<p>3.一个不小于4G的U盘</p>
-<hr>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>最低的配置：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">废弃的电脑（最好是台式机）一台：</span><br><span class="line">	内存（RAM）不低于4G</span><br><span class="line">	存储空间不低于100G</span><br><span class="line">	不需要外接设备</span><br><span class="line">	可以连接网络</span><br></pre></td></tr></table></figure>
-
-<p>我的配置：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">华硕笔记本电脑2003年：</span><br><span class="line">	内存8G（原本是2G，后面加的）</span><br><span class="line">	存储空间1T</span><br><span class="line">	英特尔i5</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="选择操作系统"><a href="#选择操作系统" class="headerlink" title="选择操作系统"></a>选择操作系统</h2><p>操作系统就像是一个人的灵魂，如果没有操作系统电脑是没办法正常使用的。</p>
-<p>操作系统主要分为以下三种：</p>
-<table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Windows</td>
-<td align="center">微软公司开发，适用于所有人使用（一般大家的电脑都是这个系统）</td>
-</tr>
-<tr>
-<td align="center">MacOS</td>
-<td align="center">苹果公司开发的，适用于开发者使用</td>
-</tr>
-<tr>
-<td align="center">Linux</td>
-<td align="center">一个开源的系统内核，任何人都可以修改成自己的系统（一般服务器用的都是这个）</td>
-</tr>
-</tbody></table>
-<p>本教程使用的是Linux系统</p>
-<p>Linux系统主要分为以下几个分支：</p>
-<ul>
-<li>Debian</li>
-<li>Redhat</li>
-<li>Arch</li>
-<li>SlackWare</li>
-<li>Gentoo</li>
-</ul>
-<p>详细图片：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/zuanshifengling/blog-img/202306031437384.png" alt="img"></p>
-<p>本教程使用的是Ubuntu Server-22.04.2 LTS（长期支持版）</p>
-<hr>
-<h2 id="下载操作系统"><a href="#下载操作系统" class="headerlink" title="下载操作系统"></a>下载操作系统</h2><p>进入网址 <a target="_blank" rel="noopener" href="https://ubuntu.com/download/server">Get Ubuntu Server | Download | Ubuntu</a></p>
-<p>可以看到以下页面：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/zuanshifengling/blog-img/202306031441502.png" alt="image-20230603144150398"></p>
-<p>点击<code>Download Ubuntu Server 22.04.2 LTS</code>，之后就会开始下载。</p>
-<h3 id="错误解决-下载慢"><a href="#错误解决-下载慢" class="headerlink" title="错误解决-下载慢"></a>错误解决-下载慢</h3><p>1.可以使用下载软件辅助下载，如：迅雷、IDM</p>
-<p>2.使用镜像站</p>
-<ul>
-<li><p>[清华大学镜像站](<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/#">清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a>) <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/jammy/ubuntu-22.04.2-live-server-amd64.iso">下载ubuntu22.04.2 LTS</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://repo.huaweicloud.com/ubuntu/">华为镜像站</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/ubuntu/">阿里云Ubuntu镜像地址</a></p>
-</li>
-</ul>
-<hr>
-<h2 id="烧录镜像"><a href="#烧录镜像" class="headerlink" title="烧录镜像"></a>烧录镜像</h2><div><h4 style="cloer: cyan;">Tip: </h4><br><p>    如果你用的是虚拟机，那么可以跳过此步骤，操作步骤自行百度，可以参考 <a href="[(1条消息) VMware虚拟机安装Ubuntu（超详细图文教程）_vm安装ubuntu_Time木0101的博客-CSDN博客](https://blog.csdn.net/qq_43374681/article/details/129248167)">CSDN</a></p></div>
-
-
-
-
-
-<p>1.下载烧录软件</p>
-<p>推荐软件<a target="_blank" rel="noopener" href="http://rufus.ie/zh/">Rufus - 轻松创建 USB 启动盘</a></p>
-<p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/pbatard/rufus/releases/download/v4.1/rufus-4.1.exe">https://github.com/pbatard/rufus/releases/download/v4.1/rufus-4.1.exe</a></p>
-<h3 id="错误解决-无法下载"><a href="#错误解决-无法下载" class="headerlink" title="错误解决-无法下载"></a>错误解决-无法下载</h3><p>原因：因为在此文章发布时间GitHub属于半墙（自行百度）状态，可以使用以下解决方法。</p>
-<ul>
-<li>安装浏览器插件</li>
-</ul>
-<p>​			1.安装油猴插件，地址：<a target="_blank" rel="noopener" href="https://www.tampermonkey.net/">首页 | Tampermonkey</a></p>
-<p>​			2.安装成功后点击<img data-src="https://cdn.jsdelivr.net/gh/zuanshifengling/blog-img/202306031501586.png" alt="image-20230603150120513"></p>
-<p>​			可以搜索GitHub加速，之后点击安装就可以了<img data-src="https://cdn.jsdelivr.net/gh/zuanshifengling/blog-img/202306031502053.png" alt="image-20230603150210955"></p>
-<ul>
-<li>使用网盘下载，无法保证是最新的 <a target="_blank" rel="noopener" href="https://wwqg.lanzouc.com/iSAMJ0y4am4f">传送门</a> 密码：<code>rufus</code></li>
-</ul>
-<p>下载后打开，长得像这样：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/zuanshifengling/blog-img/202306031510022.png" alt="image-20230603151046961"></p>
-<p>!!! warning “”</p>
-<pre><code>注意：U盘内所有内容都将被清除，请提前备份！
-</code></pre>
-<p>现在，插入U盘并选择镜像，点击开始（一路默认就行，出问题了就换成DD模式）</p>
-<p>烧录完成后的U盘应该长得像这样：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/zuanshifengling/blog-img/202306031513857.png" alt="image-20230603151343729"></p>
-<p>之后弹出U盘即可</p>
-<hr>
-<p>点个赞再走吧，你的关注是我更新最大的动力。</p>
-
+          <h2 id="FileCoxBox-Lite"><a href="#FileCoxBox-Lite" class="headerlink" title="FileCoxBox-Lite"></a>FileCoxBox-Lite</h2><p><em>匿名口令分享文本，文件，像拿快递一样取文件</em></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -597,12 +414,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="undefined | UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -612,6 +429,15 @@
 
         <div class="post-meta-container">
           <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
 
   
   
@@ -634,7 +460,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>358</span>
+      <span>359</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -657,22 +483,230 @@
 
 <p>猜猜看，这段程序运行结果如何？执行后它居然会在控制台打印：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello world!</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/Java/Java-%E8%BF%99%E4%B8%AA%E6%B3%A8%E9%87%8A%E6%80%8E%E4%B9%88%E8%BF%99%E4%B9%88%E5%A5%87%E6%80%AA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
-<p>那么这究竟是怎么回事呢?</p>
-<p>其实原理就在于大家熟悉的<code>unicode</code>编码，上面的<code>\u000d</code>就是一个<code>unicode</code>转义字符，它所表示的是一个换行符。而java中的编译器，不仅会编译代码，还会解析<code>unicode</code>编码将它替换成对应的字符。所以说，上面的代码解析完后实际是这样的：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    System.out.println(<span class="string">&quot;Hello world!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    
+    
 
-<p>这样，就能解释为什么能够执行注释中的语句了。</p>
-<p>当然，你也可以把代码写成以下这个样子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="comment">// \u000d \u0061\u002b\u002b\u003b</span></span><br><span class="line">    System.out.println(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
-<p>执行结果会打印<code>2</code>，同理，因为后面的<code>unicode</code>编码的转义后表示的是<code>a++;</code>。</p>
-<hr>
-<p>你这么写的话客户如果懂点代码，看一下就穿帮了啊，但是你如果写成下面这样，大部分估计都以为这是一段乱码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//\u000d\u0054\u0068\u0072\u0065\u0061\u0064\u002e\u0073\u006c\u0065\u0065\u0070\u0028\u0032\u0030\u0030\u0030\u0029\u003b</span><br></pre></td></tr></table></figure>
 
-<p>这个代码没个几十年的功力真看不出来这里执行的是<code>sleep</code>，简直完美。</p>
 
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2023/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="UUUP-Zh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="UUUP の 小站">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | UUUP の 小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" class="post-title-link" itemprop="url">Q-Python Flask如何定位访问者的IP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python-Flask/" itemprop="url" rel="index"><span itemprop="name">Python Flask</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="Q-Python Flask如何定位访问者的IP" href="/2023/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::3b3d6d128fa245f20a3def6741790394" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>163</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="如何在Python-Flask中获取访问者的IP地址"><a href="#如何在Python-Flask中获取访问者的IP地址" class="headerlink" title="如何在Python Flask中获取访问者的IP地址"></a>如何在Python Flask中获取访问者的IP地址</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在开发基于Python Flask的Web应用程序时，常常需要知道：</p>
+<blockquote>
+<p>如何确定访问者的IP地址</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/Python%20Flask/Q-Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="UUUP-Zh">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="UUUP の 小站">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | UUUP の 小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/" class="post-title-link" itemprop="url">个人家庭服务器搭建指南-1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">服务器搭建</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="个人家庭服务器搭建指南-1" href="/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::1b02449d3c72c1855a8531e6c64e2212" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>775</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="个人家庭服务器搭建指南-1"><a href="#个人家庭服务器搭建指南-1" class="headerlink" title="个人家庭服务器搭建指南-1"></a>个人家庭服务器搭建指南-1</h1><hr>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>目标是在家庭的局域网内搭建属于自己的网站。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%AA%E4%BA%BA%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -706,12 +740,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="undefined | UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -721,6 +755,15 @@
 
         <div class="post-meta-container">
           <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a>
+        </span>
+    </span>
 
   
   
@@ -743,7 +786,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>693</span>
+      <span>694</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -764,99 +807,14 @@
           <h1 id="Markdown语法速成技巧"><a href="#Markdown语法速成技巧" class="headerlink" title="Markdown语法速成技巧"></a>Markdown语法速成技巧</h1><hr>
 <p>本文旨在总结Markdown的常用语法，如果您发现有任何遗漏，请在评论区分享。</p>
 <hr>
-<h2 id="推荐编辑器"><a href="#推荐编辑器" class="headerlink" title="推荐编辑器"></a>推荐编辑器</h2><ul>
-<li>VS Code</li>
-<li>Typora（本人推荐）</li>
-</ul>
-<h2 id="标题设置"><a href="#标题设置" class="headerlink" title="标题设置"></a>标题设置</h2><h3 id="使用-和-："><a href="#使用-和-：" class="headerlink" title="使用-和=："></a>使用<code>-</code>和<code>=</code>：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">标题一</span><br><span class="line">=======</span><br><span class="line">标题二</span><br><span class="line">-------</span><br></pre></td></tr></table></figure>
-<h1 id="效果：标题一"><a href="#效果：标题一" class="headerlink" title="效果：标题一"></a>效果：<br>标题一</h1><p>标题二</p>
-<hr>
-<h3 id="使用-号："><a href="#使用-号：" class="headerlink" title="使用#号："></a>使用<code>#</code>号：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 标题一</span><br><span class="line">## 标题二</span><br><span class="line">### 标题三</span><br><span class="line">#### 标题四</span><br><span class="line">##### 标题五</span><br><span class="line">###### 标题六</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5><h6 id="标题六"><a href="#标题六" class="headerlink" title="标题六"></a>标题六</h6><h2 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a>段落格式</h2><p>Markdown中的段落无需特殊格式，只需在两行之间留空行或使用两个空格加回车即可。</p>
-<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br><span class="line">_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">__粗体__</span><br><span class="line">***粗斜体***</span><br><span class="line">___粗斜体___</span><br></pre></td></tr></table></figure>
-
-<p>效果：<br><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong>粗体</strong><br><em><strong>粗斜体</strong></em><br><em><strong>粗斜体</strong></em></p>
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>使用三个或以上的星号、减号或下划线创建分隔线：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">---</span><br><span class="line">_____</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">正常文字是这样的：你好</span><br><span class="line">添加删除线后的：~~你好~~</span><br></pre></td></tr></table></figure>
-
-<p>效果：<br>正常文字是这样的：你好<br>添加删除线后的：<del>你好</del></p>
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">你吃的什么菜？</span><br><span class="line"></span><br><span class="line">我吃的是[^西红柿炒鸡蛋]。</span><br><span class="line"></span><br><span class="line">...文本...</span><br><span class="line"></span><br><span class="line">[^西红柿炒鸡蛋]: 一种食物。</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<p>你吃的什么菜？</p>
-<p>我吃的是<a href="%E4%B8%80%E7%A7%8D%E9%A3%9F%E7%89%A9%E3%80%82">^西红柿炒鸡蛋</a>。</p>
-<p>…文本…</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用星号、加号或减号作为标记：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用数字和点号：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
-
-<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>在子列表前添加两个或四个空格：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套</span><br><span class="line">    - 第二项嵌套</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第一项嵌套</span><br><span class="line">    - 第二项嵌套</span><br></pre></td></tr></table></figure>
-
-<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>使用<code>&gt;</code>符号：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块引用</span><br><span class="line">&gt; 菜鸟教程</span><br><span class="line">&gt; 学的不仅是技术更是梦想</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote>
-<p>区块引用<br>菜鸟教程<br>学的不仅是技术更是梦想</p>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>单行代码使用反引号：</p>
-<p><code>`print(&quot;Hello World!&quot;)`</code></p>
-<p>多行代码使用三个反引号：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```python</span><br><span class="line">代码...</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[显示名称](网址)</span><br><span class="line"></span><br><span class="line">&lt;网址&gt;</span><br><span class="line">[Google][1]</span><br><span class="line"></span><br><span class="line">[百度][baidu]</span><br><span class="line"></span><br><span class="line">[1]: https://www.google.com/</span><br><span class="line"></span><br><span class="line">[baidu]: https://www.baidu.com/</span><br></pre></td></tr></table></figure>
-
-
-<p>效果：<br><a target="_blank" rel="noopener" href="https://www.google.com/">Google</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![替代文字](图片地址 &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>效果：<br><img data-src="/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="替代文字" title="标题"></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 表头 | 表头 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
-
-<p>对齐方式：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :---- | ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th align="left">左对齐</th>
-<th align="right">右对齐</th>
-<th align="center">居中对齐</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">单元格</td>
-<td align="right">单元格</td>
-<td align="center">单元格</td>
-</tr>
-<tr>
-<td align="left">单元格</td>
-<td align="right">单元格</td>
-<td align="center">单元格</td>
-</tr>
-</tbody></table>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>使用反斜杠<code>\</code>转义特殊字符：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\*文本加粗\*</span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
-
-<h2 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h2><p>直接使用Html代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;&lt;p style=&quot;color: red; font-size: 30px;&quot;&gt;注意&lt;/p&gt;&lt;/center&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<center><p style="color: red; font-size: 30px;">注意</p></center>
-
-<h2 id="任务清单"><a href="#任务清单" class="headerlink" title="任务清单"></a>任务清单</h2><ul>
-<li><input disabled="" type="checkbox"> 未完成</li>
-<li><input checked="" disabled="" type="checkbox"> 已完成</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/Markdown/Markdown%E8%AF%AD%E6%B3%95%E9%9B%86%E5%90%88/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -890,21 +848,30 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
+      <meta itemprop="name" content="undefined | UUUP の 小站">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/" class="post-title-link" itemprop="url">Python PEP8-中文版-全文1</a>
+          <a href="/2023/07/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/" class="post-title-link" itemprop="url">Python PEP8-中文版</a>
         </h2>
 
         <div class="post-meta-container">
           <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python-PEP%E6%A0%87%E5%87%86/" itemprop="url" rel="index"><span itemprop="name">Python PEP标准</span></a>
+        </span>
+    </span>
 
   
   
@@ -915,7 +882,7 @@
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="Python PEP8-中文版-全文1" href="/2023/07/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/#SOHUCS" itemprop="discussionUrl">
+    <a title="Python PEP8-中文版" href="/2023/07/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/#SOHUCS" itemprop="discussionUrl">
       <span id="sourceId::14c35511b00f4b63625fe3bbafd14b8a" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
@@ -946,215 +913,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="Python-PEP8-中文版-全文-1"><a href="#Python-PEP8-中文版-全文-1" class="headerlink" title="Python PEP8-中文版-全文(1)"></a>Python PEP8-中文版-全文(1)</h1><p>PEP 8——Python代码风格指南<br>PEP: 8<br>标题:Python代码风格指南<br>版本:c451868df657<br>Last-Modified: 2016-06-08 10:43:53 -0400(2016年6月8日星期三)<br>作者:guido van Rossum <guido at python.org>， Barry Warsaw &lt; Barry at python.org&gt;， Nick Coghlan <ncoghlan at gmail.com><br>状态:积极<br>类型:过程<br>内容类型:文本&#x2F; x-rst<br>创建:05 - 7 - 2001<br>后历史:2001年7月5日，2013年8月1日</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文给出了主要Python发行版中标准库的Python代码的编码约定。请参阅配套信息PEP，其中描述了Python[1]的C语言实现中C代码的风格指南。</p>
-<p>本文和PEP 257(文档字符串约定)改编自Guido最初的Python风格指南文章，并添加了一些Barry的风格指南[2]的内容。</p>
-<p>随着语言本身的变化，过去的约定也会被淘汰，因此这个风格指南也会随着时间的推移而演变。</p>
-<p>许多项目都有自己的编码风格指南。在发生任何冲突的情况下，此类特定于项目的指南优先于该项目。</p>
-<h2 id="愚蠢的一致性是小心眼的妖怪"><a href="#愚蠢的一致性是小心眼的妖怪" class="headerlink" title="愚蠢的一致性是小心眼的妖怪"></a>愚蠢的一致性是小心眼的妖怪</h2><p>Guido的一个重要见解是，代码被阅读的频率远远超过它被编写的频率。这里提供的指南旨在提高代码的可读性，并使其在广泛的Python代码中保持一致。正如PEP 20所说，“可读性很重要”。</p>
-<p>风格指南是关于一致性的。与这个风格指南保持一致很重要。项目中的一致性更为重要。一个模块或功能的一致性是最重要的。</p>
-<p>然而，要知道什么时候不一致——有时风格指南的建议并不适用。当你怀疑的时候，用你最好的判断。看看其他的例子，并决定什么看起来最好。不要犹豫，尽管问!</p>
-<p>特别是:不要仅仅为了遵循这个PEP!</p>
-<p>忽略某个特定准则的其他一些好理由:</p>
-<blockquote>
-<p>  1.当应用该指导方针时，代码的可读性会降低，即使对于习惯阅读遵循该指导方针的代码的人也是如此。<br>  2.与周围的代码保持一致，但也会破坏它(可能是由于历史原因)——尽管这也是一个清理别人的混乱的机会(以真正的XP风格)。<br>  3.因为所讨论的代码早于指南的引入，并且没有其他原因来修改该代码。<br>  4.当代码需要与不支持风格指南推荐功能的旧版本Python保持兼容时。</p>
-</blockquote>
-<h2 id="代码布局"><a href="#代码布局" class="headerlink" title="代码布局"></a>代码布局</h2><h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><p>每层缩进使用4个空格。</p>
-<p>接续行应使用Python的隐式行连接在括号、括号和大括号内垂直对齐换行元素，或使用挂缩进[7]。当使用悬挂缩进时，应考虑以下事项;第一行不应该有任何参数，并且应该使用进一步缩进来清楚地区分自己是接续行。</p>
-<p>应该的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以起始定界符对齐。</span></span><br><span class="line">Foo = long_function_name(var_one, var_two，</span><br><span class="line">var_three var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment">#包含更多缩进以区别于其他代码。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">long_function_name</span> (Var_one, var_two, var_three，</span><br><span class="line">					  var_four):</span><br><span class="line"><span class="built_in">print</span>(var_one)</span><br><span class="line"></span><br><span class="line"><span class="comment">#悬挂缩进应该添加一个层级。</span></span><br><span class="line">Foo = long_function_name(var_one var_two,</span><br><span class="line">					   var_three var_four)</span><br></pre></td></tr></table></figure>
-
-<p>错误的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#不使用垂直对齐时，禁止将参数放在第一行。</span></span><br><span class="line">Foo = long_function_name(var_one, var_two，</span><br><span class="line">var_three var_four)</span><br><span class="line"></span><br><span class="line"><span class="comment">#需要进一步缩进，因为缩进是不可区分的。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">long_function_name</span> (</span><br><span class="line">Var_one, var_two, var_three，</span><br><span class="line">var_four):</span><br><span class="line"><span class="built_in">print</span>(var_one)</span><br></pre></td></tr></table></figure>
-
-<p>4空格规则是可选的，用于接续行。</p>
-<p>可选:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#挂起的缩进* *可以* *缩进到4个空格以外的地方。</span></span><br><span class="line">Foo = long_function_name(var_one var_two,</span><br><span class="line">					   var_three var_four)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">当if语句的条件部分足够长，需要写多行时，值得注意的是两个字符的关键字(即if)，加上一个空格，再加上左括号，为多行条件语句的后续行创建了一个自然的4个空格的缩进。这可能会与嵌套在if-语句中的缩进代码产生视觉冲突，if-语句自然也缩进为4个空格。PEP没有明确说明如何(或是否)从视觉上区分这些条件行与if语句中的嵌套套件。在这种情况下，可接受的选项包括但不限于:</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#没有额外的缩进。</span></span><br><span class="line">If (this_is_one_thing <span class="keyword">and</span></span><br><span class="line">that_is_another_thing):</span><br><span class="line">do_something ()</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加注释，这将为编辑器提供一些区别</span></span><br><span class="line"><span class="comment">#支持语法高亮。</span></span><br><span class="line">If (this_is_one_thing <span class="keyword">and</span></span><br><span class="line">that_is_another_thing):</span><br><span class="line"><span class="comment">#由于两个条件都为真，我们可以frobnicate。</span></span><br><span class="line">do_something ()</span><br><span class="line"></span><br><span class="line"><span class="comment">#在条件延续行上添加一些额外的缩进。</span></span><br><span class="line">如果(this_is_one_thing</span><br><span class="line">和that_is_another_thing):</span><br><span class="line">do_something ()</span><br></pre></td></tr></table></figure>
-
-
-<p>(另见下文关于在二元运算符之前还是之后中断的讨论。)</p>
-<p>在多行结构中，右花括号&#x2F;方括号&#x2F;圆括号可以对齐到列表最后一行的第一个非空白字符下面，如下所示:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">My_list = [</span><br><span class="line">		 <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>，</span><br><span class="line">		 <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>，</span><br><span class="line">		 ]</span><br><span class="line">Result = some_function_that_takes_arguments(</span><br><span class="line">										<span class="string">&#x27;a&#x27;</span> <span class="string">&#x27;b&#x27;</span> <span class="string">&#x27;c&#x27;</span>，</span><br><span class="line">										<span class="string">&#x27;d&#x27;</span>， <span class="string">&#x27;e&#x27;</span>， <span class="string">&#x27;f&#x27;</span>，</span><br><span class="line">										)</span><br><span class="line"><span class="comment"># 它也可以排在多行结构开始的那一行的第一个字符下面，比如:</span></span><br><span class="line"></span><br><span class="line">My_list = [</span><br><span class="line">		 <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>，</span><br><span class="line">		 <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>，</span><br><span class="line">]</span><br><span class="line">Result = some_function_that_takes_arguments(</span><br><span class="line">										<span class="string">&#x27;a&#x27;</span> <span class="string">&#x27;b&#x27;</span> <span class="string">&#x27;c&#x27;</span>，</span><br><span class="line">										<span class="string">&#x27;d&#x27;</span>， <span class="string">&#x27;e&#x27;</span>， <span class="string">&#x27;f&#x27;</span>，</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zuanshifengling.github.io/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="UUUP-Zh">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="👏欢迎访问UUUP の 小站">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 👏欢迎访问UUUP の 小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/" class="post-title-link" itemprop="url">发现GitHub-文件快递柜-转载</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    <a title="发现GitHub-文件快递柜-转载" href="/2023/07/%E5%8F%91%E7%8E%B0GitHub/%E5%8F%91%E7%8E%B0GitHub-%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C-%E8%BD%AC%E8%BD%BD/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::1148baab90a6a36396da50099acfa75d" class="cy_cmt_count" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>957</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="FileCoxBox-Lite"><a href="#FileCoxBox-Lite" class="headerlink" title="FileCoxBox-Lite"></a>FileCoxBox-Lite</h2><p><em>匿名口令分享文本，文件，像拿快递一样取文件</em></p>
-<hr>
-<p><a target="_blank" rel="noopener" href="https://github.com/vastsa/FileCodeBox/blob/master/readme.md">简体中文</a> | <a target="_blank" rel="noopener" href="https://github.com/vastsa/FileCodeBox/blob/master/readme_en.md">English</a></p>
-<h2 id="主要特色"><a href="#主要特色" class="headerlink" title="主要特色"></a>主要特色</h2><ul>
-<li>轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI</li>
-<li>轻松上传：复制粘贴，拖拽选择</li>
-<li>多种类型：文本，文件</li>
-<li>防止爆破：错误次数限制</li>
-<li>防止滥用：IP限制上传次数</li>
-<li>口令分享：随机口令，存取文件，自定义次数以及有效期</li>
-<li>匿名分享：无需注册，无需登录</li>
-<li>管理面板：查看所有文件，删除文件</li>
-<li>一键部署：docker一键部署</li>
-</ul>
-<h2 id="部署方式"><a href="#部署方式" class="headerlink" title="部署方式"></a>部署方式</h2><h3 id="Docker一键部署"><a href="#Docker一键部署" class="headerlink" title="Docker一键部署"></a>Docker一键部署</h3><h4 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest</span><br></pre></td></tr></table></figure>
-
-<h4 id="ARM"><a href="#ARM" class="headerlink" title="ARM"></a>ARM</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:arm</span><br></pre></td></tr></table></figure>
-
-<h3 id="更新方式"><a href="#更新方式" class="headerlink" title="更新方式"></a>更新方式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 停止容器并删除</span><br><span class="line">docker stop filecodebox &amp;&amp; docker rm filecodebox</span><br><span class="line">// 重新运行容器</span><br><span class="line">docker run -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest</span><br></pre></td></tr></table></figure>
-
-<h3 id="其他方式"><a href="#其他方式" class="headerlink" title="其他方式"></a>其他方式</h3><p>仅供参考，历史版本-&gt;<a target="_blank" rel="noopener" href="https://www.yuque.com/lxyo/work/zd0kvzy7fofx6w7v">部署文档</a></p>
-<h2 id="项目规划"><a href="#项目规划" class="headerlink" title="项目规划"></a>项目规划</h2><p>2022年12月14日</p>
-<p>这个项目的灵感来源于丁丁快传，然后写了这么一个基于本机存储的快传系统，本系统主要是以轻量，单用户，离线环境（<code>私有化</code> ）为主，因此也不需要加太多东西，所以其实这个项目到这基本功能已经完成了，剩下的就是维护和完善现有功能。</p>
-<p>也不会再加入新的大功能了，如果有新的功能的话，那就是我们的Pro版本了，当然也是继续开源的，能和@veoco一起开源挺荣幸的，在他的代码中我学到了许多，此前我基本上是使用Django那一套，对Fastapi仅限于使用，他的许多写法让我受益匪浅，也让我对Fastapi有了更深的了解，所以我也会在Pro版本中使用Fastapi。</p>
-<p>根据目前一些使用反馈来说，希望加入登录功能，还有多存储引擎等，欢迎各位继续提意见，加入我们共同开发。</p>
-<p>如果你有更好的想法和建议欢迎提issue。</p>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><h3 id="例站"><a href="#例站" class="headerlink" title="例站"></a>例站</h3><p><a target="_blank" rel="noopener" href="https://share.lanol.cn/">https://share.lanol.cn</a></p>
-<h3 id="暗黑模式"><a href="#暗黑模式" class="headerlink" title="暗黑模式"></a>暗黑模式</h3><table>
-<thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png" alt="寄文件"></a></th>
-<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png" alt="寄文件"></a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="寄件"><a href="#寄件" class="headerlink" title="寄件"></a>寄件</h3><table>
-<thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png" alt="寄文件"></a></th>
-<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png" alt="寄文本"></a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png" alt="寄文本"></a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="取件"><a href="#取件" class="headerlink" title="取件"></a>取件</h3><table>
-<thead>
-<tr>
-<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png" alt="取件"></a></th>
-<th><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png" alt="取件码错误"></a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png" alt="取文件"></a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h3><p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png" alt="管理"></a></p>
-<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>如果需要修改配置，可以将该文件放在<code>/opt/FileCodeBox/</code>目录下，并命名为<code>.env</code>，然后重启容器即可。 如果不是Docker，则需要在项目同目录下新建一个<code>data</code>文件夹，然后在创建<code>.env</code>文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 端口</span><br><span class="line">PORT=12345</span><br><span class="line"># Sqlite数据库文件</span><br><span class="line">DATABASE_URL=sqlite+aiosqlite:///database.db</span><br><span class="line"># 静态文件夹</span><br><span class="line">DATA_ROOT=./static</span><br><span class="line"># 静态文件夹URL</span><br><span class="line">STATIC_URL=/static</span><br><span class="line"># 开启上传</span><br><span class="line">ENABLE_UPLOAD=True</span><br><span class="line"># 错误次数</span><br><span class="line">ERROR_COUNT=5</span><br><span class="line"># 错误限制分钟数</span><br><span class="line">ERROR_MINUTE=10</span><br><span class="line"># 上传次数</span><br><span class="line">UPLOAD_COUNT=60</span><br><span class="line"># 上传限制分钟数</span><br><span class="line">UPLOAD_MINUTE=1</span><br><span class="line"># 删除过期文件的间隔（分钟）</span><br><span class="line">DELETE_EXPIRE_FILES_INTERVAL=10</span><br><span class="line"># 管理地址</span><br><span class="line">ADMIN_ADDRESS=admin</span><br><span class="line"># 管理密码</span><br><span class="line">ADMIN_PASSWORD=admin</span><br><span class="line"># 文件大小限制，默认10MB</span><br><span class="line">FILE_SIZE_LIMIT=10</span><br><span class="line"># 网站标题</span><br><span class="line">TITLE=文件快递柜</span><br><span class="line"># 网站描述</span><br><span class="line">DESCRIPTION=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件</span><br><span class="line"># 网站关键词</span><br><span class="line">KEYWORDS=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件</span><br><span class="line"># 存储引擎</span><br><span class="line">STORAGE_ENGINE=filesystem</span><br></pre></td></tr></table></figure>
-
-<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667"><img data-src="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667" alt="Alt"></a></p>
-<h2 id="Star-History"><a href="#Star-History" class="headerlink" title="Star History"></a>Star History</h2><p><a target="_blank" rel="noopener" href="https://star-history.com/#vastsa/FileCodeBox&Date"><img data-src="https://camo.githubusercontent.com/5410d13ff7e4a57adfa52302a38de9c243a5bd73c05f5edc879836728770c15d/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d7661737473612f46696c65436f6465426f7826747970653d44617465" alt="Star History Chart"></a></p>
-<h2 id="赞赏"><a href="#赞赏" class="headerlink" title="赞赏"></a>赞赏</h2><table>
-<thead>
-<tr>
-<th>支付宝 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png" alt="支付宝"></a></th>
-<th>微信 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png"><img data-src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png" alt="微信"></a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol>
-<li>413 Request Entity Too Large Nginx限制： 找到自己主机的nginx.conf配置文件，打开 在http{}中加入 client_max_body_size 10m; 然后重启nginx</li>
-</ol>
-<h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本项目开源仅供学习使用，不得用于任何违法用途，否则后果自负，与本人无关。使用请保留项目地址谢谢。</p>
-<h2 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h2><p>本文转载至GitHub，原文链接：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/vastsa/FileCodeBox</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://github.com/vastsa/FileCodeBox">传送门</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/Python%20PEP/Python%20PEP8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%85%A8%E6%96%871/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1200,7 +966,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -1236,7 +1002,7 @@
   <div class="sidebar-dimmer"></div>
   <div class="reading-progress-bar"></div>
 
-  <a href="https://github.com/zuanshifengling/zuanshifengling.github.io" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <a href="https://github.com/zuanshifengling" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -1251,7 +1017,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
