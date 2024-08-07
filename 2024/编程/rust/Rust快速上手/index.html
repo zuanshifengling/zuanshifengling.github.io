@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -19,13 +19,13 @@
   <meta name="author" content="UUUP-Zh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="更新日志  2024.8.1 准备开始学Rust啦  2024.7.30 优化了网站  2024.7.28 原本的主题加载太慢了，换了个新的😂  2024.7.27 做了一个导航页，还加了只小松鼠😉 URL: https://uuupdd.github.io/  2024.7.26 Blog 升级啦，删除了一些旧文章，准备开始写文章啦 如果有什么建议，欢迎来提啦（请用 QQ 邮箱） 加载速度慢">
+    <meta name="description" content="Rust 快速上手  前言 此文章仅作为笔记使用，官方教程可以看：Learn Rust - Rust Programming Language (rust-lang.org) 内容均为原创，仅在 个人博客、BiliBili 上发布 如文章内容有误，欢迎指正  Rust 介绍 相信你也懒得看，这是官网：Rust 程序设计语言 (rust-lang.org)  全世界已有数百家公司在生产环境中使用 R">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>公告 | UP_UP! blog</title>
+  <title>Rust 快速上手 | UP_UP! blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -61,11 +61,17 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/scrollbar.css">
+<link rel="stylesheet" href="/css/maccodeblock.css">
+<link rel="stylesheet" href="/css/changyan.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"always","icon":"❡ "},"progressbar":{"enable":true,"height_px":5,"color":"#FFB6C1","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"always","icon":"# "},"progressbar":{"enable":true,"height_px":5,"color":"#FFB6C1","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -229,7 +235,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">公告</span>
+            <span id="subtitle">Rust 快速上手</span>
           
         </div>
 
@@ -245,8 +251,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="1000-01-01 00:00" pubdate>
-          1000年1月1日 凌晨
+        <time datetime="2024-08-05 00:00" pubdate>
+          2024年8月5日 凌晨
         </time>
       </span>
     
@@ -257,7 +263,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          129 字
+          331 字
         
       </span>
     
@@ -268,7 +274,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -327,33 +333,41 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">公告</h1>
+            <h1 id="seo-header">Rust 快速上手</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>更新日志</h1>
+                <h1>Rust 快速上手</h1>
 <hr>
-<h2 id="2024-8-1">2024.8.1</h2>
-<p>准备开始学Rust啦</p>
+<h2 id="前言">前言</h2>
+<p>此文章仅作为笔记使用，官方教程可以看：<a target="_blank" rel="noopener" href="https://www.rust-lang.org/learn">Learn Rust - Rust Programming Language (rust-lang.org)</a></p>
+<p>内容均为原创，仅在 <a href="https://zuanshifengling.github.io"><code>个人博客</code></a>、<a target="_blank" rel="noopener" href="https://space.bilibili.com/1670308509"><code>BiliBili</code></a> 上发布</p>
+<p>如文章内容有误，欢迎指正</p>
 <hr>
-<h2 id="2024-7-30">2024.7.30</h2>
-<p>优化了网站</p>
+<h2 id="Rust 介绍">Rust 介绍</h2>
+<p>相信你也懒得看，这是官网：<a target="_blank" rel="noopener" href="https://www.rust-lang.org/zh-CN/">Rust 程序设计语言 (rust-lang.org)</a></p>
+<blockquote>
+<p>全世界已有数百家公司在生产环境中使用 Rust，以达到快速、跨平台、低资源占用的目的。很多著名且受欢迎的软件，例如 <a target="_blank" rel="noopener" href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">Firefox</a>、 <a target="_blank" rel="noopener" href="https://blogs.dropbox.com/tech/2016/06/lossless-compression-with-brotli/">Dropbox</a> 和 <a target="_blank" rel="noopener" href="https://blog.cloudflare.com/cloudflare-workers-as-a-serverless-rust-platform/">Cloudflare</a> 都在使用 Rust。<strong>从初创公司到大型企业，从嵌入式设备到可扩展的 Web 服务，Rust 都完全合适。</strong></p>
+<p>——Rust 文档</p>
+</blockquote>
 <hr>
-<h2 id="2024-7-28">2024.7.28</h2>
-<p>原本的主题加载太慢了，换了个新的😂</p>
+<h2 id="安装">安装</h2>
+<h3 id="环境介绍">环境介绍</h3>
+<p>Windows 10 LTSC 2021 x64</p>
+<h3 id="下载安装文件">下载安装文件</h3>
+<p>这是官方网址，流程已经写的很清楚了，这里不过多赘述：<a target="_blank" rel="noopener" href="https://www.rust-lang.org/zh-CN/tools/install">安装 Rust - Rust 程序设计语言 (rust-lang.org)</a></p>
+<h3 id="安装 -2">安装</h3>
+<p>参考官方文档：<a target="_blank" rel="noopener" href="https://course.rs/first-try/installation.html">安装 Rust 环境 - Rust 语言圣经(Rust Course)</a></p>
+<p>如果使用 Windows，参考微软官方文档：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/dev-environment/rust/setup">在 Windows 上针对 Rust 设置开发环境 | Microsoft Learn</a></p>
+<h3 id="测试">测试</h3>
+<p><strong>注意！安装完成后请先关闭终端，再次重新打开以更新环境变量</strong></p>
+<p>打开终端，输入：<code>rustc --version</code>，应出现类似以下的输出：</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gml">rustc <span class="hljs-variable language_">x</span>.xx.<span class="hljs-variable language_">x</span> (xxxx-xx-xx)<br></code></pre></td></tr></table></figure>
+<h3 id="更新与卸载">更新与卸载</h3>
+<p>在终端输入 <code>rustup update</code> 以更新</p>
+<p>输入 <code>rustup self uninstall</code> 以卸载</p>
 <hr>
-<h2 id="2024-7-27">2024.7.27</h2>
-<p>做了一个导航页，还加了只小松鼠😉</p>
-<p>URL: <a target="_blank" rel="noopener" href="https://uuupdd.github.io/">https://uuupdd.github.io/</a></p>
-<hr>
-<h2 id="2024-7-26">2024.7.26</h2>
-<p>Blog 升级啦，删除了一些旧文章，准备开始写文章啦</p>
-<p>如果有什么建议，欢迎来提啦（请用 QQ 邮箱）</p>
-<p>加载速度慢，这也是没办法的事情</p>
-<hr>
-<h2 id="2024-2-24">2024.2.24</h2>
-<p>网站换新主题啦，不知道都要干嘛</p>
 
                 
               </div>
@@ -362,6 +376,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Rust/" class="category-chain-item">Rust</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Rust/" class="print-no-link">#Rust</a>
+      
+    </div>
   
 </div>
 
@@ -371,8 +413,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>公告</div>
-      <div>https://zuanshifengling.github.io/1000/置顶文章/</div>
+      <div>Rust 快速上手</div>
+      <div>https://zuanshifengling.github.io/2024/编程/rust/Rust快速上手/</div>
     </div>
     <div class="license-meta">
       
@@ -384,7 +426,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>1000年1月1日</div>
+          <div>2024年8月5日</div>
         </div>
       
       
@@ -428,15 +470,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1%E2%80%94%E2%80%94Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" title="每日一计——Flask如何定位访问者的IP">
+                      <a href="/9999/%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/" title="公告">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每日一计——Flask如何定位访问者的IP</span>
+                        <span class="hidden-mobile">公告</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/%E5%8F%91%E7%8E%B0%E4%B8%96%E7%95%8C/GitHub%E5%BC%80%E6%BA%90%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C/" title="GitHub 开源——文件快递柜">
+                        <span class="hidden-mobile">GitHub 开源——文件快递柜</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -448,6 +496,16 @@
   
     <article id="comments" lazyload>
       
+  <div id="SOHUCS" sid='https://zuanshifengling.github.io/2024/%E7%BC%96%E7%A8%8B/rust/Rust%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cyxq2M76H","appkey":"prod_150d9e80270f7782d95a0a03514059de"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
     </article>
   
@@ -537,7 +595,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <!-- <i class="iconfont icon-love"></i> --> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <br> <div> <span id="timeDate">载入中...</span> <span id="times">载入中...</span> <script> var now = new Date(); function createtime(){ var grt= new Date("07/21/2020 00:00:00"); now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 ){ hnum = "0" + hnum; } minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 ){ mnum = "0" + mnum; } seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 ){ snum = "0" + snum; } document.getElementById("timeDate").innerHTML = "已平稳运行&nbsp"+dnum+"&nbspdays"; document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec"; } setInterval("createtime()",250); </script> </div> <br> <div class="text-center py-1">    <div> <span>Copyright © 2020</span></a> <a href="https://zuanshifengling.github.io" target="_blank" rel="nofollow noopener"> <span>UUUP‘s Blog</span></a>    <br> </div> 
     </div>
   
   
@@ -704,7 +762,6 @@
 
   
 <script src="/js/sakura.js"></script>
-<script src="/js/live2D.js"></script>
 
 
 

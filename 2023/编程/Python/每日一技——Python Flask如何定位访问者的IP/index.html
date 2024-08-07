@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -19,13 +19,13 @@
   <meta name="author" content="UUUP-Zh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="首先来看看下面的代码，简单到main方法中只有一行注释。 123public static void main(String[] args) &amp;#123;    // \u000d System.out.println(&amp;quot;Hello world!&amp;quot;);&amp;#125; 然而，这段代码在运行后会输出： 1Hello world!">
+    <meta name="description" content="如何在Python Flask中获取访问者的IP地址 概述 在开发基于Python Flask的Web应用程序时，常常需要知道：  如何确定访问者的IP地址">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>每日一计Java——利用unicode编码执行代码 | UP_UP! blog</title>
+  <title>每日一技——Python Flask 如何定位访问者的 IP | UP_UP! blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -61,11 +61,17 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/scrollbar.css">
+<link rel="stylesheet" href="/css/maccodeblock.css">
+<link rel="stylesheet" href="/css/changyan.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"always","icon":"❡ "},"progressbar":{"enable":true,"height_px":5,"color":"#FFB6C1","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"always","icon":"# "},"progressbar":{"enable":true,"height_px":5,"color":"#FFB6C1","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -229,7 +235,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">每日一计Java——利用unicode编码执行代码</span>
+            <span id="subtitle">每日一技——Python Flask 如何定位访问者的 IP</span>
           
         </div>
 
@@ -257,7 +263,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          330 字
+          172 字
         
       </span>
     
@@ -268,7 +274,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -327,27 +333,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">每日一计Java——利用unicode编码执行代码</h1>
+            <h1 id="seo-header">每日一技——Python Flask 如何定位访问者的 IP</h1>
             
             
               <div class="markdown-body">
                 
-                <p>首先来看看下面的代码，简单到<code>main</code>方法中只有一行注释。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">// \u000d System.out.println(&quot;Hello world!&quot;);</span><br>&#125;<br></code></pre></td></tr></table></figure>
-<p>然而，这段代码在运行后会输出：</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">Hello world!<br></code></pre></td></tr></table></figure>
+                <h1> 如何在 Python Flask 中获取访问者的 IP 地址 </h1>
+<h2 id="概述"> 概述 </h2>
+<p> 在开发基于 Python Flask 的 Web 应用程序时，常常需要知道：</p>
+<blockquote>
+<p> 如何确定访问者的 IP 地址 </p>
+</blockquote>
 <span id="more"></span>
-<p>那么这究竟是怎么回事呢?</p>
-<p>其实原理就在于大家熟悉的<code>unicode</code>编码，上面的<code>\u000d</code>就是一个<code>unicode</code>转义字符，它所表示的是一个换行符。而java中的编译器，不仅会编译代码，还会解析<code>unicode</code>编码将它替换成对应的字符。所以说，上面的代码解析完后实际是这样的：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">//</span><br>    System.out.println(<span class="hljs-string">&quot;Hello world!&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>这样，就能解释为什么能够执行注释中的语句了。</p>
-<p>当然，你也可以把代码写成以下这个样子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-type">int</span> a=<span class="hljs-number">1</span>;<br>    <span class="hljs-comment">// \u000d \u0061\u002b\u002b\u003b</span><br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>执行结果会打印<code>2</code>，同理，因为后面的<code>unicode</code>编码的转义后表示的是<code>a++;</code>。</p>
-<hr>
-<p>你这么写的话客户如果懂点代码，看一下就穿帮了啊，但是你如果写成下面这样，大部分估计都以为这是一段乱码：</p>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">//<span class="hljs-symbol">\u000d</span><span class="hljs-symbol">\u0054</span><span class="hljs-symbol">\u0068</span><span class="hljs-symbol">\u0072</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0061</span><span class="hljs-symbol">\u0064</span><span class="hljs-symbol">\u002e</span><span class="hljs-symbol">\u0073</span><span class="hljs-symbol">\u006c</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0070</span><span class="hljs-symbol">\u0028</span><span class="hljs-symbol">\u0032</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0029</span><span class="hljs-symbol">\u003b</span><br></code></pre></td></tr></table></figure>
-<p>这个代码没个几十年的功力真看不出来这里执行的是<code>sleep</code>，简直完美。</p>
+<h2 id="Flask 基础程序示例">Flask 基础程序示例 </h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br>app = Flask(__name__)<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&lt;p&gt;Hello World!&lt;/p&gt;&#x27;</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">80</span>, debug=<span class="hljs-literal">True</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="获取 IP 地址"> 获取 IP 地址 </h2>
+<p>Flask 框架便利地提供了获取访问者 IP 的捷径：</p>
+<blockquote>
+<p><strong>remote_addr</strong> 属性 </p>
+</blockquote>
+<p> 要使用这个功能，首先需要导入 <code>flask.request</code> 模块。<br>
+下面是一个实现示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, request<br>app = Flask(__name__)<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    visitor_ip = request.remote_addr<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&lt;h1&gt; 您当前的 IP 地址是：&#x27;</span> + visitor_ip + <span class="hljs-string">&#x27;&lt;/h1&gt;&#x27;</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -366,7 +373,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/Python/" class="category-chain-item">Python</a>
   
   
 
@@ -381,9 +388,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/" class="print-no-link">#Java</a>
-      
         <a href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1/" class="print-no-link">#每日一计</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/Flask/" class="print-no-link">#Flask</a>
       
     </div>
   
@@ -395,8 +404,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>每日一计Java——利用unicode编码执行代码</div>
-      <div>https://zuanshifengling.github.io/2023/编程/Java/每日一计Java——利用unicode编码执行代码/</div>
+      <div>每日一技——Python Flask 如何定位访问者的 IP</div>
+      <div>https://zuanshifengling.github.io/2023/编程/Python/每日一技——Python Flask如何定位访问者的IP/</div>
     </div>
     <div class="license-meta">
       
@@ -452,21 +461,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/Markdown/Markdown%E8%AF%AD%E6%B3%95/" title="Markdown语法">
+                      <a href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="每日一技——Java 利用 unicode 编码执行代码">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Markdown语法</span>
+                        <span class="hidden-mobile">每日一技——Java 利用 unicode 编码执行代码</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1%E2%80%94%E2%80%94Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" title="每日一计——Flask如何定位访问者的IP">
-                        <span class="hidden-mobile">每日一计——Flask如何定位访问者的IP</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -478,6 +481,16 @@
   
     <article id="comments" lazyload>
       
+  <div id="SOHUCS" sid='https://zuanshifengling.github.io/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cyxq2M76H","appkey":"prod_150d9e80270f7782d95a0a03514059de"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
     </article>
   
@@ -567,7 +580,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <!-- <i class="iconfont icon-love"></i> --> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <br> <div> <span id="timeDate">载入中...</span> <span id="times">载入中...</span> <script> var now = new Date(); function createtime(){ var grt= new Date("07/21/2020 00:00:00"); now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 ){ hnum = "0" + hnum; } minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 ){ mnum = "0" + mnum; } seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 ){ snum = "0" + snum; } document.getElementById("timeDate").innerHTML = "已平稳运行&nbsp"+dnum+"&nbspdays"; document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec"; } setInterval("createtime()",250); </script> </div> <br> <div class="text-center py-1">    <div> <span>Copyright © 2020</span></a> <a href="https://zuanshifengling.github.io" target="_blank" rel="nofollow noopener"> <span>UUUP‘s Blog</span></a>    <br> </div> 
     </div>
   
   
@@ -734,7 +747,6 @@
 
   
 <script src="/js/sakura.js"></script>
-<script src="/js/live2D.js"></script>
 
 
 

@@ -19,13 +19,13 @@
   <meta name="author" content="UUUP-Zh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="">
+    <meta name="description" content="首先来看看下面的代码，简单到main方法中只有一行注释。 123public static void main(String[] args) &amp;#123;    // \u000d System.out.println(&amp;quot;Hello world!&amp;quot;);&amp;#125; 然而，这段代码在运行后会输出： 1Hello world!">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>关于 | UP_UP! blog</title>
+  <title>每日一技——Java 利用 unicode 编码执行代码 | UP_UP! blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -93,7 +93,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -229,15 +229,69 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/image/Genshin_Impact_WenDi.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/image/TowGirls_with_ubralla.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">关于</span>
+            <span id="subtitle">每日一技——Java 利用 unicode 编码执行代码</span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        UUUP-Zh
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-07-27 00:00" pubdate>
+          2023年7月27日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          330 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
 
         
       </div>
@@ -253,83 +307,210 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/image/LuoTianYi_Qavatar.png" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">UUUP-Zh</div>
-    <div class="about-intro">Ciallo～(∠・ω< )⌒☆</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://github.com/zuanshifengling class="
-           hint--bottom hint--rounded"
-           aria-label="GitHub"
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">每日一技——Java 利用 unicode 编码执行代码</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>首先来看看下面的代码，简单到 <code>main</code> 方法中只有一行注释。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">// \u000d System.out.println(&quot;Hello world!&quot;);</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>然而，这段代码在运行后会输出：</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">Hello world!<br></code></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>那么这究竟是怎么回事呢?</p>
+<p>其实原理就在于大家熟悉的 <code>unicode</code> 编码，上面的 <code>\u000d</code> 就是一个 <code>unicode</code> 转义字符，它所表示的是一个换行符。而 java 中的编译器，不仅会编译代码，还会解析 <code>unicode</code> 编码将它替换成对应的字符。所以说，上面的代码解析完后实际是这样的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">//</span><br>    System.out.println(<span class="hljs-string">&quot;Hello world!&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这样，就能解释为什么能够执行注释中的语句了。</p>
+<p>当然，你也可以把代码写成以下这个样子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-type">int</span> a=<span class="hljs-number">1</span>;<br>    <span class="hljs-comment">// \u000d \u0061\u002b\u002b\u003b</span><br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>执行结果会打印 <code>2</code>，同理，因为后面的<code>unicode</code> 编码的转义后表示的是<code>a++;</code>。</p>
+<hr>
+<p>你这么写的话客户如果懂点代码，看一下就穿帮了啊，但是你如果写成下面这样，大部分估计都以为这是一段乱码：</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">//<span class="hljs-symbol">\u000d</span><span class="hljs-symbol">\u0054</span><span class="hljs-symbol">\u0068</span><span class="hljs-symbol">\u0072</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0061</span><span class="hljs-symbol">\u0064</span><span class="hljs-symbol">\u002e</span><span class="hljs-symbol">\u0073</span><span class="hljs-symbol">\u006c</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0070</span><span class="hljs-symbol">\u0028</span><span class="hljs-symbol">\u0032</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0029</span><span class="hljs-symbol">\u003b</span><br></code></pre></td></tr></table></figure>
+<p>这个代码没个几十年的功力真看不出来这里执行的是<code>sleep</code>，简直完美。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
       
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
         
-        
-        
-        <a href=https://github.com/uuupdd class="
-           hint--bottom hint--rounded"
-           aria-label="GitHub"
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-        
-        
-        
-        <a href=https://space.bilibili.com/1670308509 class="
-           hint--bottom hint--rounded"
-           aria-label="BiliBili"
-           target="_blank"
-        >
-          <i class="iconfont icon-bilibili-fill" aria-hidden="true"></i>
-          
-        </a>
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
       
+        <a href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1/" class="print-no-link">#每日一计</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>每日一技——Java 利用 unicode 编码执行代码</div>
+      <div>https://zuanshifengling.github.io/2023/编程/Java/每日一技——Java利用unicode编码执行代码/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>UUUP-Zh</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年7月27日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E6%8C%87%E5%8C%97/" title="系统烧录指北">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">系统烧录指北</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" title="每日一技——Python Flask 如何定位访问者的 IP">
+                        <span class="hidden-mobile">每日一技——Python Flask 如何定位访问者的 IP</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="SOHUCS" sid='https://zuanshifengling.github.io/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cyxq2M76H","appkey":"prod_150d9e80270f7782d95a0a03514059de"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    <h1> 关于我 </h1>
-<p> 随缘更新 </p>
-<p> 支持支持我的 B 站账户呀🫠</p>
-<p> 如果有任何建议或意见欢迎发邮箱 -&gt; <a href="mailto:zhyx_web@qq.com">zhyx_web@qq.com</a></p>
-<hr>
-<h1> 关于网站 </h1>
-<p> 采用 Hexo 静态博客生成器，Fluid 主题 </p>
-<p> 部署在 GitHub Pages 上，使用 CloudFlare 加速 </p>
-<p> 导航站：<a target="_blank" rel="noopener" href="https://uuupdd.github.io/">https://uuupdd.github.io/</a></p>
-<p> 同步镜像站：<a target="_blank" rel="noopener" href="https://zuanshifengling-github-io.pages.dev/">CloudFlare 镜像站 </a>    <a target="_blank" rel="noopener" href="https://zhyx.vercel.app/">Vercel 镜像站 </a></p>
-
-  </div>
-
-  
-</article>
-
 
 
 
@@ -361,11 +542,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -468,6 +646,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

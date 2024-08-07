@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -53,11 +53,17 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/scrollbar.css">
+<link rel="stylesheet" href="/css/maccodeblock.css">
+<link rel="stylesheet" href="/css/changyan.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"always","icon":"❡ "},"progressbar":{"enable":true,"height_px":5,"color":"#FFB6C1","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zuanshifengling.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"always","icon":"# "},"progressbar":{"enable":true,"height_px":5,"color":"#FFB6C1","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":false,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -221,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="念念不忘，必有回响"></span>
+            <span id="subtitle">念念不忘，必有回响</span>
           
         </div>
 
@@ -259,8 +265,97 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+          <i class="index-pin iconfont icon-top" title="Pin on top"></i>
+        
+        <a href="/9999/%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/" target="_self">
+          公告
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/9999/%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/" target="_self">
+        <div>
+          更新日志   2024.8.7  更新内容如下:  [-] 删除了 live2D 看板娘  [*] 优化网站整体配色  [+] 添加评论系统    2024.8.1  准备开始学 Rust 啦   2024.7.30  优化了网站   2024.7.28  原本的主题加载太慢了，换了个新的😂  2024.7.27  做了一个导航页，还加了只小松鼠😉 URL: https://uuupdd.g
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="9999-12-31 00:00" pubdate>
+              9999-12-31
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/%E7%BC%96%E7%A8%8B/rust/Rust%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" target="_self">
+          Rust 快速上手
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/%E7%BC%96%E7%A8%8B/rust/Rust%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" target="_self">
+        <div>
+          Rust 快速上手  前言 此文章仅作为笔记使用，官方教程可以看：Learn Rust - Rust Programming Language (rust-lang.org) 内容均为原创，仅在 个人博客、BiliBili 上发布 如文章内容有误，欢迎指正  Rust 介绍 相信你也懒得看，这是官网：Rust 程序设计语言 (rust-lang.org)  全世界已有数百家公司在生产环境中使用 R
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-05 00:00" pubdate>
+              2024-08-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Rust/" class="category-chain-item">Rust</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/%E5%8F%91%E7%8E%B0%E4%B8%96%E7%95%8C/GitHub%E5%BC%80%E6%BA%90%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C/" target="_self">
-          GitHub开源——文件快递柜
+          GitHub 开源——文件快递柜
         </a>
       </h2>
 
@@ -313,62 +408,8 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E6%8C%87%E5%8C%97/" target="_self">
-          系统烧录指北
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E6%8C%87%E5%8C%97/" target="_self">
-        <div>
-          本章节需要的物品 1.一台待装机的电脑 2.一台可以正常使用的电脑 3.一个不小于4G的U盘  选择操作系统 操作系统就像是一个人的灵魂，如果没有操作系统电脑是没办法正常使用的。 操作系统主要分为以下三种：    名称 介绍     Windows 微软公司开发，适用于所有人使用（一般大家的电脑都是这个系统）   MacOS 苹果公司开发的，适用于开发者使用   Linux 一个开源的系统内核，任
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-27 00:00" pubdate>
-              2023-07-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" class="category-chain-item">计算机系统</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
         <a href="/2023/Markdown/Markdown%E8%AF%AD%E6%B3%95/" target="_self">
-          Markdown语法
+          Markdown 语法
         </a>
       </h2>
 
@@ -421,13 +462,67 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1Java%E2%80%94%E2%80%94%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" target="_self">
-          每日一计Java——利用unicode编码执行代码
+        <a href="/2023/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E6%8C%87%E5%8C%97/" target="_self">
+          系统烧录指北
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1Java%E2%80%94%E2%80%94%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E6%8C%87%E5%8C%97/" target="_self">
+        <div>
+          本章节需要的物品  1. 一台待装机的电脑  2. 一台可以正常使用的电脑  3. 一个不小于 4G 的 U 盘    选择操作系统   操作系统就像是一个人的灵魂，如果没有操作系统电脑是没办法正常使用的。  操作系统主要分为以下三种：     名称   介绍      Windows  微软公司开发，适用于所有人使用（一般大家的电脑都是这个系统）   MacOS  苹果公司开发的，适用于开发者
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-27 00:00" pubdate>
+              2023-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" class="category-chain-item">计算机系统</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" target="_self">
+          每日一技——Java 利用 unicode 编码执行代码
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" target="_self">
         <div>
           首先来看看下面的代码，简单到main方法中只有一行注释。 123public static void main(String[] args) &#123;    // \u000d System.out.println(&quot;Hello world!&quot;);&#125; 然而，这段代码在运行后会输出： 1Hello world!
         </div>
@@ -475,13 +570,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1%E2%80%94%E2%80%94Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" target="_self">
-          每日一计——Flask如何定位访问者的IP
+        <a href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" target="_self">
+          每日一技——Python Flask 如何定位访问者的 IP
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AE%A1%E2%80%94%E2%80%94Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/" target="_self">
         <div>
           如何在Python Flask中获取访问者的IP地址 概述 在开发基于Python Flask的Web应用程序时，常常需要知道：  如何确定访问者的IP地址
         </div>
@@ -517,39 +612,6 @@
 </span>
 
           </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/1000/%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/" target="_self">
-          公告
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/1000/%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/" target="_self">
-        <div>
-          更新日志  2024.8.1 准备开始学Rust啦  2024.7.30 优化了网站  2024.7.28 原本的主题加载太慢了，换了个新的😂  2024.7.27 做了一个导航页，还加了只小松鼠😉 URL: https://uuupdd.github.io/  2024.7.26 Blog 升级啦，删除了一些旧文章，准备开始写文章啦 如果有什么建议，欢迎来提啦（请用 QQ 邮箱） 加载速度慢
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="1000-01-01 00:00" pubdate>
-              1000-01-01
-            </time>
-          </div>
-        
         
         
       </div>
@@ -604,7 +666,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <!-- <i class="iconfont icon-love"></i> --> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <br> <div> <span id="timeDate">载入中...</span> <span id="times">载入中...</span> <script> var now = new Date(); function createtime(){ var grt= new Date("07/21/2020 00:00:00"); now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); if(String(hnum).length ==1 ){ hnum = "0" + hnum; } minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); mnum = Math.floor(minutes); if(String(mnum).length ==1 ){ mnum = "0" + mnum; } seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); snum = Math.round(seconds); if(String(snum).length ==1 ){ snum = "0" + snum; } document.getElementById("timeDate").innerHTML = "已平稳运行&nbsp"+dnum+"&nbspdays"; document.getElementById("times").innerHTML = hnum + "&nbsphr&nbsp" + mnum + "&nbspmin&nbsp" + snum + "&nbspsec"; } setInterval("createtime()",250); </script> </div> <br> <div class="text-center py-1">    <div> <span>Copyright © 2020</span></a> <a href="https://zuanshifengling.github.io" target="_blank" rel="nofollow noopener"> <span>UUUP‘s Blog</span></a>    <br> </div> 
     </div>
   
   
@@ -659,21 +721,6 @@
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
 
 
 
@@ -693,7 +740,6 @@
 
   
 <script src="/js/sakura.js"></script>
-<script src="/js/live2D.js"></script>
 
 
 

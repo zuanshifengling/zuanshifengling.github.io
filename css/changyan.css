@@ -1,0 +1,104 @@
+/* 畅言评论美化 */
+
+.module-cmt-box {
+    padding: 10px 0!important;
+    margin-top: -10px!important;
+    overflow: visible!important;
+}
+
+.header-login {
+    left: 90px!important;
+    border: 0!important;
+    border-radius: 0!important;
+    margin-top: 88px!important;
+    border-radius: 21px!important;
+}
+
+.post-wrap-border-l,.post-wrap-border-r,.post-wrap-border-t-l,.post-wrap-border-t-r {
+    display: none;
+}
+
+.post-wrap-main {
+    border: 0!important;
+}
+
+.post-wrap-w {
+    background: #f0f0f0;
+}
+
+.btn-fw {
+    background: #5fb878 url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHBhdGggZD0iTTgxNy42NTcgNzc1Ljc1OEw0NTQuNzEgNjY0LjA4bDM2Mi45NS00MTguNzg4TDM0My4wMzIgNjY0LjA4IDYzLjgzNyA1NTIuNDAzIDk1Ny4yNTYgNzcuNzc1IDgxNy42NTcgNzc1Ljc1OHpNNDU0LjcxIDk0My4yNzVWNzQ3Ljg0bDExMS42NzQgNTUuODRMNDU0LjcxIDk0My4yNzR6IiBmaWxsPSIjZmZmIi8+PC9zdmc+) center no-repeat!important;
+    width: 60px!important;
+    height: 60px!important;
+    border-radius: 30px;
+    margin-top: -5px!important;
+    margin-right: 40px!important;
+    background-size: 30px!important;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+    -webkit-transition: .3s;
+    transition: .3s;
+    outline: none;
+}
+
+.btn-fw:hover {
+    box-shadow: 4px 4px 10px rgba(0,0,0,.2);
+}
+
+.block-head-w,.cmt-list-type {
+    height: 0px!important;
+}
+
+.section-service-w {
+    height: 0;
+    opacity: 0;
+}
+
+.head-img-w {
+    margin: 0!important;
+}
+
+.head-img-wimg {
+    width: 25px!important;
+    height: 25px!important;
+}
+
+.head-img-w {
+    top: 118px!important;
+    left: 95px!important;
+}
+
+.wrap-action-gw {
+    border-bottom: 1px solid #dee4e9!important;
+    padding-top: 30px!important;
+    padding-bottom: 1pc!important;
+}
+
+.cmt-list-number,.title-name-gw-tag,.type-lists,.wrap-name-w {
+    display: none!important;
+}
+
+.cmt-list-type {
+    margin: 0!important;
+}
+
+.build-floor-gw {
+    background: #f0f0f0!important;
+}
+
+.block-cont-gw {
+    padding: 20px 0!important;
+    border: 0!important;
+}
+
+.section-list-w {
+    width: 95%!important;
+    margin-left: 2%!important;
+}
+
+.build-floor-gw {
+    background: #f9f9f9!important;
+}
+
+.user-name-gw>a {
+    text-decoration: none!important;
+}
