@@ -36,6 +36,133 @@
 ]]></content>
   </entry>
   <entry>
+    <title>GitHub 开源——文件快递柜</title>
+    <url>/2023/%E5%8F%91%E7%8E%B0%E4%B8%96%E7%95%8C/GitHub%E5%BC%80%E6%BA%90%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C/</url>
+    <content><![CDATA[<h2 id="FileCoxBox-Lite">FileCoxBox-Lite</h2>
+<p><em>匿名口令分享文本，文件，像拿快递一样取文件</em></p>
+<span id="more"></span>
+<hr>
+<p><a href="https://github.com/vastsa/FileCodeBox/blob/master/readme.md">简体中文</a> | <a href="https://github.com/vastsa/FileCodeBox/blob/master/readme_en.md">English</a></p>
+<h2 id="主要特色">主要特色</h2>
+<ul>
+<li>轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI</li>
+<li>轻松上传：复制粘贴，拖拽选择</li>
+<li>多种类型：文本，文件</li>
+<li>防止爆破：错误次数限制</li>
+<li>防止滥用：IP 限制上传次数</li>
+<li>口令分享：随机口令，存取文件，自定义次数以及有效期</li>
+<li>匿名分享：无需注册，无需登录</li>
+<li>管理面板：查看所有文件，删除文件</li>
+<li>一键部署：docker 一键部署</li>
+</ul>
+<h2 id="部署方式">部署方式</h2>
+<h3 id="Docker 一键部署">Docker 一键部署</h3>
+<h4 id="AMD">AMD</h4>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest</span><br></code></pre></td></tr></table></figure>
+<h4 id="ARM">ARM</h4>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:arm</span><br></code></pre></td></tr></table></figure>
+<h3 id="更新方式">更新方式</h3>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">//</span> 停止容器并删除<br>docker stop filecodebox &amp;&amp; docker rm filecodebox<br><span class="hljs-string">//</span> 重新运行容器<br>docker run -d <span class="hljs-params">--restart=always</span> -p 12345<span class="hljs-function">:12345</span> -v <span class="hljs-string">/opt/FileCodeBox/</span>:<span class="hljs-string">/app/data</span> <span class="hljs-params">--name</span> filecodebox lanol/filecodebox<span class="hljs-function">:latest</span><br></code></pre></td></tr></table></figure>
+<h3 id="其他方式">其他方式</h3>
+<p>仅供参考，历史版本 -&gt;<a href="https://www.yuque.com/lxyo/work/zd0kvzy7fofx6w7v">部署文档</a></p>
+<h2 id="项目规划">项目规划</h2>
+<p>2022 年 12 月 14 日</p>
+<p>这个项目的灵感来源于丁丁快传，然后写了这么一个基于本机存储的快传系统，本系统主要是以轻量，单用户，离线环境（<code>私有化</code> ）为主，因此也不需要加太多东西，所以其实这个项目到这基本功能已经完成了，剩下的就是维护和完善现有功能。</p>
+<p>也不会再加入新的大功能了，如果有新的功能的话，那就是我们的 Pro 版本了，当然也是继续开源的，能和 @veoco 一起开源挺荣幸的，在他的代码中我学到了许多，此前我基本上是使用 Django 那一套，对 Fastapi 仅限于使用，他的许多写法让我受益匪浅，也让我对 Fastapi 有了更深的了解，所以我也会在 Pro 版本中使用 Fastapi。</p>
+<p>根据目前一些使用反馈来说，希望加入登录功能，还有多存储引擎等，欢迎各位继续提意见，加入我们共同开发。</p>
+<p>如果你有更好的想法和建议欢迎提 issue。</p>
+<h2 id="预览">预览</h2>
+<h3 id="例站">例站</h3>
+<p><a href="https://share.lanol.cn/">https://share.lanol.cn</a></p>
+<h3 id="暗黑模式">暗黑模式</h3>
+<table>
+<thead>
+<tr>
+<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png" alt="寄文件"></a></th>
+<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png" alt="寄文件"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="寄件">寄件</h3>
+<table>
+<thead>
+<tr>
+<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png" alt="寄文件"></a></th>
+<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png" alt="寄文本"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png" alt="寄文本"></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="取件">取件</h3>
+<table>
+<thead>
+<tr>
+<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png" alt="取件"></a></th>
+<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png" alt="取件码错误"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png" alt="取文件"></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="管理">管理</h3>
+<p><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png" alt="管理"></a></p>
+<h2 id="配置文件">配置文件</h2>
+<p>如果需要修改配置，可以将该文件放在 <code>/opt/FileCodeBox/</code> 目录下，并命名为 <code>.env</code>，然后重启容器即可。 如果不是 Docker，则需要在项目同目录下新建一个<code>data</code> 文件夹，然后在创建 <code>.env</code> 文件</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 端口</span><br><span class="hljs-attr">PORT</span>=<span class="hljs-number">12345</span><br><span class="hljs-comment"># Sqlite 数据库文件</span><br><span class="hljs-attr">DATABASE_URL</span>=sqlite+aiosqlite:///database.db<br><span class="hljs-comment"># 静态文件夹</span><br><span class="hljs-attr">DATA_ROOT</span>=./static<br><span class="hljs-comment"># 静态文件夹 URL</span><br><span class="hljs-attr">STATIC_URL</span>=/static<br><span class="hljs-comment"># 开启上传</span><br><span class="hljs-attr">ENABLE_UPLOAD</span>=<span class="hljs-literal">True</span><br><span class="hljs-comment"># 错误次数</span><br><span class="hljs-attr">ERROR_COUNT</span>=<span class="hljs-number">5</span><br><span class="hljs-comment"># 错误限制分钟数</span><br><span class="hljs-attr">ERROR_MINUTE</span>=<span class="hljs-number">10</span><br><span class="hljs-comment"># 上传次数</span><br><span class="hljs-attr">UPLOAD_COUNT</span>=<span class="hljs-number">60</span><br><span class="hljs-comment"># 上传限制分钟数</span><br><span class="hljs-attr">UPLOAD_MINUTE</span>=<span class="hljs-number">1</span><br><span class="hljs-comment"># 删除过期文件的间隔（分钟）</span><br><span class="hljs-attr">DELETE_EXPIRE_FILES_INTERVAL</span>=<span class="hljs-number">10</span><br><span class="hljs-comment"># 管理地址</span><br><span class="hljs-attr">ADMIN_ADDRESS</span>=admin<br><span class="hljs-comment"># 管理密码</span><br><span class="hljs-attr">ADMIN_PASSWORD</span>=admin<br><span class="hljs-comment"># 文件大小限制，默认 10MB</span><br><span class="hljs-attr">FILE_SIZE_LIMIT</span>=<span class="hljs-number">10</span><br><span class="hljs-comment"># 网站标题</span><br><span class="hljs-attr">TITLE</span>= 文件快递柜<br><span class="hljs-comment"># 网站描述</span><br><span class="hljs-attr">DESCRIPTION</span>=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件<br><span class="hljs-comment"># 网站关键词</span><br><span class="hljs-attr">KEYWORDS</span>=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件<br><span class="hljs-comment"># 存储引擎</span><br><span class="hljs-attr">STORAGE_ENGINE</span>=filesystem<br></code></pre></td></tr></table></figure>
+<h2 id="状态">状态</h2>
+<p><a href="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667"><img src="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667" alt="Alt"></a></p>
+<h2 id="Star-History">Star History</h2>
+<p><a href="https://star-history.com/#vastsa/FileCodeBox&amp;Date"><img src="https://camo.githubusercontent.com/5410d13ff7e4a57adfa52302a38de9c243a5bd73c05f5edc879836728770c15d/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d7661737473612f46696c65436f6465426f7826747970653d44617465" alt="Star History Chart"></a></p>
+<h2 id="赞赏">赞赏</h2>
+<table>
+<thead>
+<tr>
+<th>支付宝 <a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png" alt="支付宝"></a></th>
+<th>微信 <a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png" alt="微信"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="常见问题">常见问题</h2>
+<ol>
+<li>413 Request Entity Too Large Nginx 限制： 找到自己主机的 nginx.conf 配置文件，打开 在 http{}中加入 client_max_body_size 10m; 然后重启 nginx</li>
+</ol>
+<h2 id="免责声明">免责声明</h2>
+<p>本项目开源仅供学习使用，不得用于任何违法用途，否则后果自负，与本人无关。使用请保留项目地址谢谢。</p>
+<h2 id="转载">转载</h2>
+<p>本文转载至 GitHub，原文链接：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/vastsa/</span>FileCodeBox<br></code></pre></td></tr></table></figure>
+<p><a href="https://github.com/vastsa/FileCodeBox">传送门</a></p>
+]]></content>
+      <categories>
+        <category>发现世界</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>开源</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown 语法</title>
     <url>/2023/Markdown/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1>Markdown 语法</h1>
@@ -276,158 +403,33 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一技——Java 利用 unicode 编码执行代码</title>
-    <url>/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p>首先来看看下面的代码，简单到 <code>main</code> 方法中只有一行注释。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">// \u000d System.out.println(&quot;Hello world!&quot;);</span><br>&#125;<br></code></pre></td></tr></table></figure>
-<p>然而，这段代码在运行后会输出：</p>
-<figure class="highlight erlang-repl"><table><tr><td class="code"><pre><code class="hljs erlang-repl">Hello world!<br></code></pre></td></tr></table></figure>
+    <title>每日一技——Python Flask 如何定位访问者的 IP</title>
+    <url>/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/</url>
+    <content><![CDATA[<h1> 如何在 Python Flask 中获取访问者的 IP 地址 </h1>
+<h2 id="概述"> 概述 </h2>
+<p> 在开发基于 Python Flask 的 Web 应用程序时，常常需要知道：</p>
+<blockquote>
+<p> 如何确定访问者的 IP 地址 </p>
+</blockquote>
 <span id="more"></span>
-<p>那么这究竟是怎么回事呢?</p>
-<p>其实原理就在于大家熟悉的 <code>unicode</code> 编码，上面的 <code>\u000d</code> 就是一个 <code>unicode</code> 转义字符，它所表示的是一个换行符。而 java 中的编译器，不仅会编译代码，还会解析 <code>unicode</code> 编码将它替换成对应的字符。所以说，上面的代码解析完后实际是这样的：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">//</span><br>    System.out.println(<span class="hljs-string">&quot;Hello world!&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>这样，就能解释为什么能够执行注释中的语句了。</p>
-<p>当然，你也可以把代码写成以下这个样子：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-type">int</span> a=<span class="hljs-number">1</span>;<br>    <span class="hljs-comment">// \u000d \u0061\u002b\u002b\u003b</span><br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>执行结果会打印 <code>2</code>，同理，因为后面的<code>unicode</code> 编码的转义后表示的是<code>a++;</code>。</p>
-<hr>
-<p>你这么写的话客户如果懂点代码，看一下就穿帮了啊，但是你如果写成下面这样，大部分估计都以为这是一段乱码：</p>
-<figure class="highlight taggerscript"><table><tr><td class="code"><pre><code class="hljs taggerscript">//<span class="hljs-symbol">\u000d</span><span class="hljs-symbol">\u0054</span><span class="hljs-symbol">\u0068</span><span class="hljs-symbol">\u0072</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0061</span><span class="hljs-symbol">\u0064</span><span class="hljs-symbol">\u002e</span><span class="hljs-symbol">\u0073</span><span class="hljs-symbol">\u006c</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0070</span><span class="hljs-symbol">\u0028</span><span class="hljs-symbol">\u0032</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0029</span><span class="hljs-symbol">\u003b</span><br></code></pre></td></tr></table></figure>
-<p>这个代码没个几十年的功力真看不出来这里执行的是<code>sleep</code>，简直完美。</p>
+<h2 id="Flask 基础程序示例">Flask 基础程序示例 </h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br>app = Flask(__name__)<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&lt;p&gt;Hello World!&lt;/p&gt;&#x27;</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">80</span>, debug=<span class="hljs-literal">True</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="获取 IP 地址"> 获取 IP 地址 </h2>
+<p>Flask 框架便利地提供了获取访问者 IP 的捷径：</p>
+<blockquote>
+<p><strong>remote_addr</strong> 属性 </p>
+</blockquote>
+<p> 要使用这个功能，首先需要导入 <code>flask.request</code> 模块。<br>
+下面是一个实现示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, request<br>app = Flask(__name__)<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    visitor_ip = request.remote_addr<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&lt;h1&gt; 您当前的 IP 地址是：&#x27;</span> + visitor_ip + <span class="hljs-string">&#x27;&lt;/h1&gt;&#x27;</span><br></code></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>每日一计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub 开源——文件快递柜</title>
-    <url>/2023/%E5%8F%91%E7%8E%B0%E4%B8%96%E7%95%8C/GitHub%E5%BC%80%E6%BA%90%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E5%BF%AB%E9%80%92%E6%9F%9C/</url>
-    <content><![CDATA[<h2 id="FileCoxBox-Lite">FileCoxBox-Lite</h2>
-<p><em>匿名口令分享文本，文件，像拿快递一样取文件</em></p>
-<span id="more"></span>
-<hr>
-<p><a href="https://github.com/vastsa/FileCodeBox/blob/master/readme.md">简体中文</a> | <a href="https://github.com/vastsa/FileCodeBox/blob/master/readme_en.md">English</a></p>
-<h2 id="主要特色">主要特色</h2>
-<ul>
-<li>轻量简洁：Fastapi+Sqlite3+Vue2+ElementUI</li>
-<li>轻松上传：复制粘贴，拖拽选择</li>
-<li>多种类型：文本，文件</li>
-<li>防止爆破：错误次数限制</li>
-<li>防止滥用：IP 限制上传次数</li>
-<li>口令分享：随机口令，存取文件，自定义次数以及有效期</li>
-<li>匿名分享：无需注册，无需登录</li>
-<li>管理面板：查看所有文件，删除文件</li>
-<li>一键部署：docker 一键部署</li>
-</ul>
-<h2 id="部署方式">部署方式</h2>
-<h3 id="Docker 一键部署">Docker 一键部署</h3>
-<h4 id="AMD">AMD</h4>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:latest</span><br></code></pre></td></tr></table></figure>
-<h4 id="ARM">ARM</h4>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -d --restart=always -p 12345:12345 -v /opt/FileCodeBox/:/app/data --name filecodebox lanol/filecodebox:arm</span><br></code></pre></td></tr></table></figure>
-<h3 id="更新方式">更新方式</h3>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">//</span> 停止容器并删除<br>docker stop filecodebox &amp;&amp; docker rm filecodebox<br><span class="hljs-string">//</span> 重新运行容器<br>docker run -d <span class="hljs-params">--restart=always</span> -p 12345<span class="hljs-function">:12345</span> -v <span class="hljs-string">/opt/FileCodeBox/</span>:<span class="hljs-string">/app/data</span> <span class="hljs-params">--name</span> filecodebox lanol/filecodebox<span class="hljs-function">:latest</span><br></code></pre></td></tr></table></figure>
-<h3 id="其他方式">其他方式</h3>
-<p>仅供参考，历史版本 -&gt;<a href="https://www.yuque.com/lxyo/work/zd0kvzy7fofx6w7v">部署文档</a></p>
-<h2 id="项目规划">项目规划</h2>
-<p>2022 年 12 月 14 日</p>
-<p>这个项目的灵感来源于丁丁快传，然后写了这么一个基于本机存储的快传系统，本系统主要是以轻量，单用户，离线环境（<code>私有化</code> ）为主，因此也不需要加太多东西，所以其实这个项目到这基本功能已经完成了，剩下的就是维护和完善现有功能。</p>
-<p>也不会再加入新的大功能了，如果有新的功能的话，那就是我们的 Pro 版本了，当然也是继续开源的，能和 @veoco 一起开源挺荣幸的，在他的代码中我学到了许多，此前我基本上是使用 Django 那一套，对 Fastapi 仅限于使用，他的许多写法让我受益匪浅，也让我对 Fastapi 有了更深的了解，所以我也会在 Pro 版本中使用 Fastapi。</p>
-<p>根据目前一些使用反馈来说，希望加入登录功能，还有多存储引擎等，欢迎各位继续提意见，加入我们共同开发。</p>
-<p>如果你有更好的想法和建议欢迎提 issue。</p>
-<h2 id="预览">预览</h2>
-<h3 id="例站">例站</h3>
-<p><a href="https://share.lanol.cn/">https://share.lanol.cn</a></p>
-<h3 id="暗黑模式">暗黑模式</h3>
-<table>
-<thead>
-<tr>
-<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_10.png" alt="寄文件"></a></th>
-<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_11.png" alt="寄文件"></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="寄件">寄件</h3>
-<table>
-<thead>
-<tr>
-<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_1.png" alt="寄文件"></a></th>
-<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_2.png" alt="寄文本"></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_3.png" alt="寄文本"></a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="取件">取件</h3>
-<table>
-<thead>
-<tr>
-<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_6.png" alt="取件"></a></th>
-<th><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_5.png" alt="取件码错误"></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_4.png" alt="取文件"></a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="管理">管理</h3>
-<p><a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_7.png" alt="管理"></a></p>
-<h2 id="配置文件">配置文件</h2>
-<p>如果需要修改配置，可以将该文件放在 <code>/opt/FileCodeBox/</code> 目录下，并命名为 <code>.env</code>，然后重启容器即可。 如果不是 Docker，则需要在项目同目录下新建一个<code>data</code> 文件夹，然后在创建 <code>.env</code> 文件</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 端口</span><br><span class="hljs-attr">PORT</span>=<span class="hljs-number">12345</span><br><span class="hljs-comment"># Sqlite 数据库文件</span><br><span class="hljs-attr">DATABASE_URL</span>=sqlite+aiosqlite:///database.db<br><span class="hljs-comment"># 静态文件夹</span><br><span class="hljs-attr">DATA_ROOT</span>=./static<br><span class="hljs-comment"># 静态文件夹 URL</span><br><span class="hljs-attr">STATIC_URL</span>=/static<br><span class="hljs-comment"># 开启上传</span><br><span class="hljs-attr">ENABLE_UPLOAD</span>=<span class="hljs-literal">True</span><br><span class="hljs-comment"># 错误次数</span><br><span class="hljs-attr">ERROR_COUNT</span>=<span class="hljs-number">5</span><br><span class="hljs-comment"># 错误限制分钟数</span><br><span class="hljs-attr">ERROR_MINUTE</span>=<span class="hljs-number">10</span><br><span class="hljs-comment"># 上传次数</span><br><span class="hljs-attr">UPLOAD_COUNT</span>=<span class="hljs-number">60</span><br><span class="hljs-comment"># 上传限制分钟数</span><br><span class="hljs-attr">UPLOAD_MINUTE</span>=<span class="hljs-number">1</span><br><span class="hljs-comment"># 删除过期文件的间隔（分钟）</span><br><span class="hljs-attr">DELETE_EXPIRE_FILES_INTERVAL</span>=<span class="hljs-number">10</span><br><span class="hljs-comment"># 管理地址</span><br><span class="hljs-attr">ADMIN_ADDRESS</span>=admin<br><span class="hljs-comment"># 管理密码</span><br><span class="hljs-attr">ADMIN_PASSWORD</span>=admin<br><span class="hljs-comment"># 文件大小限制，默认 10MB</span><br><span class="hljs-attr">FILE_SIZE_LIMIT</span>=<span class="hljs-number">10</span><br><span class="hljs-comment"># 网站标题</span><br><span class="hljs-attr">TITLE</span>= 文件快递柜<br><span class="hljs-comment"># 网站描述</span><br><span class="hljs-attr">DESCRIPTION</span>=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件<br><span class="hljs-comment"># 网站关键词</span><br><span class="hljs-attr">KEYWORDS</span>=FileCodeBox，文件快递柜，口令传送箱，匿名口令分享文本，文件，图片，视频，音频，压缩包等文件<br><span class="hljs-comment"># 存储引擎</span><br><span class="hljs-attr">STORAGE_ENGINE</span>=filesystem<br></code></pre></td></tr></table></figure>
-<h2 id="状态">状态</h2>
-<p><a href="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667"><img src="https://camo.githubusercontent.com/07b75c756621c0bde42d2c1223872e4101bd12ac2811045b85396385de008ca5/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f376136633932663164393665653537653666623637663064663337313532383339376230633961632e737667" alt="Alt"></a></p>
-<h2 id="Star-History">Star History</h2>
-<p><a href="https://star-history.com/#vastsa/FileCodeBox&amp;Date"><img src="https://camo.githubusercontent.com/5410d13ff7e4a57adfa52302a38de9c243a5bd73c05f5edc879836728770c15d/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d7661737473612f46696c65436f6465426f7826747970653d44617465" alt="Star History Chart"></a></p>
-<h2 id="赞赏">赞赏</h2>
-<table>
-<thead>
-<tr>
-<th>支付宝 <a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_9.png" alt="支付宝"></a></th>
-<th>微信 <a href="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png"><img src="https://raw.githubusercontent.com/vastsa/FileCodeBox/master/images/img_8.png" alt="微信"></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="常见问题">常见问题</h2>
-<ol>
-<li>413 Request Entity Too Large Nginx 限制： 找到自己主机的 nginx.conf 配置文件，打开 在 http{}中加入 client_max_body_size 10m; 然后重启 nginx</li>
-</ol>
-<h2 id="免责声明">免责声明</h2>
-<p>本项目开源仅供学习使用，不得用于任何违法用途，否则后果自负，与本人无关。使用请保留项目地址谢谢。</p>
-<h2 id="转载">转载</h2>
-<p>本文转载至 GitHub，原文链接：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/vastsa/</span>FileCodeBox<br></code></pre></td></tr></table></figure>
-<p><a href="https://github.com/vastsa/FileCodeBox">传送门</a></p>
-]]></content>
-      <categories>
-        <category>发现世界</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>开源</tag>
+        <tag>Python</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -472,33 +474,31 @@
       </tags>
   </entry>
   <entry>
-    <title>每日一技——Python Flask 如何定位访问者的 IP</title>
-    <url>/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/</url>
-    <content><![CDATA[<h1> 如何在 Python Flask 中获取访问者的 IP 地址 </h1>
-<h2 id="概述"> 概述 </h2>
-<p> 在开发基于 Python Flask 的 Web 应用程序时，常常需要知道：</p>
-<blockquote>
-<p> 如何确定访问者的 IP 地址 </p>
-</blockquote>
+    <title>每日一技——Java 利用 unicode 编码执行代码</title>
+    <url>/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>首先来看看下面的代码，简单到 <code>main</code> 方法中只有一行注释。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">// \u000d System.out.println(&quot;Hello world!&quot;);</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>然而，这段代码在运行后会输出：</p>
+<figure class="highlight erlang-repl"><table><tr><td class="code"><pre><code class="hljs erlang-repl">Hello world!<br></code></pre></td></tr></table></figure>
 <span id="more"></span>
-<h2 id="Flask 基础程序示例">Flask 基础程序示例 </h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br>app = Flask(__name__)<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&lt;p&gt;Hello World!&lt;/p&gt;&#x27;</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">80</span>, debug=<span class="hljs-literal">True</span>)<br></code></pre></td></tr></table></figure>
-<h2 id="获取 IP 地址"> 获取 IP 地址 </h2>
-<p>Flask 框架便利地提供了获取访问者 IP 的捷径：</p>
-<blockquote>
-<p><strong>remote_addr</strong> 属性 </p>
-</blockquote>
-<p> 要使用这个功能，首先需要导入 <code>flask.request</code> 模块。<br>
-下面是一个实现示例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, request<br>app = Flask(__name__)<br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    visitor_ip = request.remote_addr<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&lt;h1&gt; 您当前的 IP 地址是：&#x27;</span> + visitor_ip + <span class="hljs-string">&#x27;&lt;/h1&gt;&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>那么这究竟是怎么回事呢?</p>
+<p>其实原理就在于大家熟悉的 <code>unicode</code> 编码，上面的 <code>\u000d</code> 就是一个 <code>unicode</code> 转义字符，它所表示的是一个换行符。而 java 中的编译器，不仅会编译代码，还会解析 <code>unicode</code> 编码将它替换成对应的字符。所以说，上面的代码解析完后实际是这样的：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-comment">//</span><br>    System.out.println(<span class="hljs-string">&quot;Hello world!&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这样，就能解释为什么能够执行注释中的语句了。</p>
+<p>当然，你也可以把代码写成以下这个样子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>    <span class="hljs-type">int</span> a=<span class="hljs-number">1</span>;<br>    <span class="hljs-comment">// \u000d \u0061\u002b\u002b\u003b</span><br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>执行结果会打印 <code>2</code>，同理，因为后面的<code>unicode</code> 编码的转义后表示的是<code>a++;</code>。</p>
+<hr>
+<p>你这么写的话客户如果懂点代码，看一下就穿帮了啊，但是你如果写成下面这样，大部分估计都以为这是一段乱码：</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><code class="hljs taggerscript">//<span class="hljs-symbol">\u000d</span><span class="hljs-symbol">\u0054</span><span class="hljs-symbol">\u0068</span><span class="hljs-symbol">\u0072</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0061</span><span class="hljs-symbol">\u0064</span><span class="hljs-symbol">\u002e</span><span class="hljs-symbol">\u0073</span><span class="hljs-symbol">\u006c</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0065</span><span class="hljs-symbol">\u0070</span><span class="hljs-symbol">\u0028</span><span class="hljs-symbol">\u0032</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0030</span><span class="hljs-symbol">\u0029</span><span class="hljs-symbol">\u003b</span><br></code></pre></td></tr></table></figure>
+<p>这个代码没个几十年的功力真看不出来这里执行的是<code>sleep</code>，简直完美。</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Java</category>
       </categories>
       <tags>
         <tag>每日一计</tag>
-        <tag>Python</tag>
-        <tag>Flask</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>

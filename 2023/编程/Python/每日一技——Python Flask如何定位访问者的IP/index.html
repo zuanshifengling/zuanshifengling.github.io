@@ -461,15 +461,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="每日一技——Java 利用 unicode 编码执行代码">
+                      <a href="/2023/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%BD%95%E6%8C%87%E5%8C%97/" title="系统烧录指北">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每日一技——Java 利用 unicode 编码执行代码</span>
+                        <span class="hidden-mobile">系统烧录指北</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/%E7%BC%96%E7%A8%8B/Java/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Java%E5%88%A9%E7%94%A8unicode%E7%BC%96%E7%A0%81%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81/" title="每日一技——Java 利用 unicode 编码执行代码">
+                        <span class="hidden-mobile">每日一技——Java 利用 unicode 编码执行代码</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -481,11 +487,24 @@
   
     <article id="comments" lazyload>
       
-  <div id="SOHUCS" sid='https://zuanshifengling.github.io/2023/%E7%BC%96%E7%A8%8B/Python/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%8A%80%E2%80%94%E2%80%94Python%20Flask%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%AE%BF%E9%97%AE%E8%80%85%E7%9A%84IP/'></div>
+  <div id="waline"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-        window.changyan.api.config({"appid":"cyxq2M76H","appkey":"prod_150d9e80270f7782d95a0a03514059de"})
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/waline.css')
+      Fluid.utils.createScript('https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/waline.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blogping-f7ko3sje4-zuanshifenglings-projects.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
       });
     });
   </script>
